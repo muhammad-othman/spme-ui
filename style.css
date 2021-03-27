@@ -1,0 +1,19 @@
+header {
+  color: #115FAF;
+  background-color: #FF7C00;
+}
+
+@media (min-width: 40em) {
+  header {
+    color: #397BDE;
+    background-color: #C10F23;
+  }
+}
+@media (min-width: 75em) {
+  header {
+    color: #3362CC;
+    background-color: #54C9A4;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

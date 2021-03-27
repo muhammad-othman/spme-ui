@@ -1,0 +1,25 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+
+header {
+    color:$primary;
+    background-color:$secondary;
+}
+
+
+
+@include tablet-media-query {
+    header {
+        color:$info;
+        background-color:$danger;
+    }
+}
+
+
+@include desktop-media-query {
+    header {
+        color:$blue;
+        background-color:$green;
+    }
+}
