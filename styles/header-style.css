@@ -15,6 +15,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   background-color: red;
+  border: 2px solid black;
 }
 
 .menu li {
