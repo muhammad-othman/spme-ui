@@ -1,7 +1,23 @@
 @import "mixins.scss";
 @import "variables.scss";
 @import "header-style.scss";
-@import "head-style.scss";
+@import "main-banner.scss";
+
+* {
+  direction: rtl;
+  margin: 0;
+  padding: 0%;
+}
+
+.container {
+  width: 90%;
+  max-width: 73.125rem;
+  margin: auto;
+}
+
+.flex-div {
+  display: flex;
+}
 
 @include tablet-media-query {
   header {
@@ -11,13 +27,4 @@
 @include desktop-media-query {
   header {
   }
-}
-
-* {
-  direction: rtl;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
 }
