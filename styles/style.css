@@ -1,30 +1,49 @@
 header {
-  background-color: yellow;
+  display: flex;
+  height: 72px;
+  position: sticky;
+  box-shadow: 0 2px 5px 0 #00000014;
+  background: #FFFFFF;
+  top: 0;
+  font-weight: bold;
+}
+header .menu {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+header .menu .outlined-button, header .menu .primary-button {
+  width: 124px;
+}
+header .menu li {
+  margin-right: 15px;
+}
+header .menu .text-button {
+  color: #05111E;
+  font-weight: bolder;
+  padding: 8px;
+}
+header .header-img {
+  height: 52px;
+  margin-left: 30px;
+}
+header .search {
+  margin: 0 40px;
+  flex: 1;
+  height: 42px;
+  background-image: url(../assets/search.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 10px;
+  background-position-x: 10px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .flex-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: red;
-  border: 2px solid black;
-}
-
-.menu li {
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.menu a {
-  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-banner {
@@ -38,8 +57,9 @@ h1 {
 * {
   direction: rtl;
   margin: 0;
-  padding: 0%;
+  padding: 0;
   font-family: Almarai, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 .container {
@@ -49,8 +69,42 @@ h1 {
 }
 
 .flex-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
+
+.button {
+  font-size: 12px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  background-color: #F4F5F7;
+}
+
+.outlined-button {
+  background-color: #FFFFFF;
+  border: 2px solid #FF7C00;
+  color: #FF7C00;
+}
+
+.primary-button {
+  background-color: #115FAF;
+  border: 2px solid #115FAF;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 /*# sourceMappingURL=style.css.map */
