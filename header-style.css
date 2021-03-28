@@ -25,21 +25,4 @@ header {
 .menu a {
   text-decoration: none;
 }
-
-.head {
-  background-image: url(photos/blue-background.svg);
-}
-
-h1 {
-  color: white;
-}
-
-* {
-  direction: rtl;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=header-style.css.map */

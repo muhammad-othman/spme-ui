@@ -1,0 +1,22 @@
+header {
+  background-color: yellow;
+}
+
+.flex-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu {
+  display: flex;
+  background-color: red;
+
+  li {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
