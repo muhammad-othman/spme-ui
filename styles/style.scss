@@ -17,17 +17,13 @@
   margin: auto;
 }
 
-.flex-div {
-  display: flex;
-}
-
 .button {
-  font-size: 12px;
+  font-size: 0.75rem;
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
   display: inline-block;
-  padding: 10px 0;
+  padding: 0.625rem 0;
 }
 
 input {
@@ -41,15 +37,40 @@ input {
   border: 2px solid $secondary;
   color: $secondary;
 }
+
 .primary-button {
   background-color: $primary;
   border: 2px solid $primary;
   color: $white;
 }
+
+.outlined-button:hover,
+.primary-button:hover {
+  background: $secondary;
+  border: 2px solid $secondary;
+  color: $white;
+}
+
+.text-button {
+  color: $dark-1;
+  font-weight: bolder;
+  padding: 0.5rem;
+}
+
+.text-button:hover {
+  color: $primary;
+}
+
 a {
   text-decoration: none;
 }
+
 li {
   list-style-type: none;
 }
 
+.flex-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
