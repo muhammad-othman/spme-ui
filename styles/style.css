@@ -27,7 +27,7 @@ header {
 }
 
 .head {
-  background-image: url(photos/blue-background.svg);
+  background-image: url(../assets/blue-background.svg);
 }
 
 h1 {
