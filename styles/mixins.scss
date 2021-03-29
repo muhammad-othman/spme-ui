@@ -2,6 +2,10 @@
     @media (min-width: 40em) { @content };
 }
 
+@mixin big-tablet-media-query {
+    @media (min-width: 62em) { @content };
+}
+
 
 @mixin desktop-media-query {
     @media (min-width: 75em) { @content };

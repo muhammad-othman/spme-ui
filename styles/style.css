@@ -111,11 +111,57 @@ header .show-more-icon {
 .main-banner {
   background-image: url(../assets/blue-background.svg);
 }
-
-h1 {
+.main-banner .flex-div {
+  padding: 1.875rem 0;
+  flex-direction: column;
+}
+.main-banner .head-info {
+  padding: 0.625rem;
+}
+.main-banner .head-info h1 {
   color: white;
+  font-size: 2.875rem;
+}
+.main-banner .head-info p {
+  color: white;
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+  line-height: 1.8;
+}
+.main-banner .head-info a {
+  position: relative;
+  padding: 0.7rem 2rem 0.7rem 3.5rem;
+  margin-top: 1.25rem;
+}
+.main-banner .head-info a img {
+  position: absolute;
+  top: 1.0625rem;
+  left: 1.5625rem;
+}
+.main-banner .banner-img {
+  margin-top: 1.875rem;
+  width: 25rem;
 }
 
+@media (min-width: 40em) {
+  .main-banner .banner-img {
+    width: 30rem;
+  }
+}
+@media (min-width: 62em) {
+  .main-banner .flex-div {
+    padding: 5.65rem 0;
+    flex-direction: row;
+  }
+  .main-banner .banner-img {
+    width: 31.25rem;
+  }
+}
+@media (min-width: 75em) {
+  .main-banner .banner-img {
+    width: 41.25rem;
+  }
+}
 * {
   direction: rtl;
   margin: 0;
@@ -158,7 +204,8 @@ input {
 }
 
 .outlined-button:hover,
-.primary-button:hover {
+.primary-button:hover,
+.selected-button {
   background: #FF7C00;
   border: 2px solid #FF7C00;
   color: #FFFFFF;

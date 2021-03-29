@@ -45,11 +45,13 @@ input {
 }
 
 .outlined-button:hover,
-.primary-button:hover {
+.primary-button:hover,
+.selected-button {
   background: $secondary;
   border: 2px solid $secondary;
   color: $white;
 }
+
 
 .text-button {
   color: $dark-1;

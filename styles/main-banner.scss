@@ -1,7 +1,68 @@
 .main-banner {
   background-image: url(../assets/blue-background.svg);
+
+  .flex-div {
+    padding: 1.875rem 0;
+    flex-direction: column;
+  }
+  .head-info {
+    padding: 0.625rem;
+
+    h1 {
+      color: white;
+      font-size: 2.875rem;
+    }
+
+    p {
+      color: white;
+      font-size: 0.875rem;
+      margin-top: 1.25rem;
+      line-height: 1.8;
+    }
+
+    a {
+      position: relative;
+      padding: 0.7rem 2rem 0.7rem 3.5rem;
+      margin-top: 1.25rem;
+      img {
+        position: absolute;
+        top: 1.0625rem;
+        left: 1.5625rem;
+      }
+    }
+  }
+
+  .banner-img {
+    margin-top: 1.875rem;
+    width: 25rem;
+  }
 }
 
-h1 {
-  color: white;
+@include tablet-media-query {
+  .main-banner {
+    .banner-img {
+      width: 30rem;
+    }
+  }
+}
+
+@include big-tablet-media-query {
+  .main-banner {
+    .flex-div {
+      padding: 5.65rem 0;
+      flex-direction: row;
+    }
+
+    .banner-img {
+      width: 31.25rem;
+    }
+  }
+}
+
+@include desktop-media-query {
+  .main-banner {
+    .banner-img {
+      width: 41.25rem;
+    }
+  }
 }
