@@ -111,22 +111,23 @@ header .show-more-icon {
 .main-banner {
   background-image: url(../assets/blue-background.svg);
 }
-.main-banner .flex-div {
+.main-banner .container {
   padding: 1.875rem 0;
-  flex-direction: column;
+  text-align: center;
 }
 .main-banner .head-info {
   padding: 0.625rem;
 }
 .main-banner .head-info h1 {
-  color: white;
+  color: #FFFFFF;
   font-size: 2.875rem;
 }
 .main-banner .head-info p {
-  color: white;
+  color: #FFFFFF;
   font-size: 0.875rem;
   margin-top: 1.25rem;
   line-height: 1.8;
+  padding: 0 3.1rem;
 }
 .main-banner .head-info a {
   position: relative;
@@ -149,9 +150,15 @@ header .show-more-icon {
   }
 }
 @media (min-width: 62em) {
-  .main-banner .flex-div {
+  .main-banner .container {
+    text-align: right;
     padding: 5.65rem 0;
-    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-banner .container p {
+    padding: 0;
   }
   .main-banner .banner-img {
     width: 31.25rem;
