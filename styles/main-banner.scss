@@ -7,27 +7,26 @@
   }
   .head-info {
     padding: 0.625rem;
+    color: $white;
 
     h1 {
-      color: $white;
       font-size: 2.875rem;
     }
 
     p {
-      color: $white;
       font-size: 0.875rem;
       margin-top: 1.25rem;
       line-height: 1.8;
       padding: 0 3.1rem;
     }
 
-    a {
+    a {                     
       position: relative;
-      padding: 0.7rem 2rem 0.7rem 3.5rem;
+      padding: 0.6rem 2rem 0.75rem 3.5rem;
       margin-top: 1.25rem;
       img {
         position: absolute;
-        top: 1.0625rem;
+        top: 1rem;
         left: 1.5625rem;
       }
     }
@@ -36,6 +35,7 @@
   .banner-img {
     margin-top: 1.875rem;
     width: 25rem;
+    max-width: 100%;
   }
 }
 

@@ -2,6 +2,7 @@
 @import "variables.scss";
 @import "header-style.scss";
 @import "main-banner.scss";
+@import "courses-containar.scss";
 
 * {
   direction: rtl;
@@ -52,6 +53,9 @@ input {
   color: $white;
 }
 
+.selected-button:hover {
+  opacity: 0.8;
+}
 
 .text-button {
   color: $dark-1;

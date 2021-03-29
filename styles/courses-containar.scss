@@ -1,0 +1,24 @@
+.courses-container {
+  font-size: 0.875rem;
+  color: $dark-1;
+
+  .top-info {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title-info {
+      background-color: yellow;
+
+      p {
+        padding-top: 10px;
+      }
+    }
+
+    .see-more-courses-button {
+      display: flex;
+      align-items: center;
+      min-width: 7rem;
+    }
+  }
+}
