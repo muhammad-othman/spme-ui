@@ -3,22 +3,126 @@
   color: $dark-1;
 
   .top-info {
-    padding: 40px 0;
+    padding: 2.5rem 0 1.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .title-info {
-      background-color: yellow;
-
-      p {
-        padding-top: 10px;
-      }
+      margin-left: 3.5rem;
     }
 
     .see-more-courses-button {
       display: flex;
-      align-items: center;
+      justify-content: space-between;
       min-width: 7rem;
+      color: $primary;
     }
   }
+
+  .course-cards {    
+    .course-card {
+      margin: auto;
+      box-shadow: 0px 3px 10px #00000015;
+      border-radius: 10px;
+      width: 370px;
+      padding: 0 0.6rem;
+
+      .card-img {
+        margin: 0.6rem auto;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+
+        img {
+          min-width: 100%;
+          min-height: 100%;
+        }
+      }
+      .card-content {
+        margin: 0 0.3rem;
+        .trainer {
+          display: flex;
+          margin: 0.8rem 0;
+
+          p {
+            color: $primary;
+            align-self: center;
+          }
+
+          .trainer-img {
+            margin-left: 0.7rem;
+            border-radius: 50%;
+            width: 2.19rem;
+            overflow: hidden;
+            height: 2.19rem;
+
+            img {
+              width: 3rem;
+            }
+          }
+        }
+
+        .card-summary {
+          h2 {
+            font-size: 1.125rem;
+          }
+        }
+
+        .card-info {
+          ul {
+            display: flex;
+            margin: 1.5rem 0.6rem;
+            .different-item {
+              border-right: 1px solid $grey-5;
+              border-left: 1px solid $grey-5;
+            }
+            li {
+              display: flex;
+              width: 100%;
+              padding: 0 0.85rem;
+
+              img {
+                margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+
+        .light-button {
+          display: flex;
+          justify-content: center;
+          background: $grey-1;
+          border-radius: 5px;
+          color: $dark-1;
+          padding: 0.85rem 0;
+          margin-bottom: 1.5rem;
+
+          img {
+            margin: 0.27rem 0.4rem 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@include tablet-media-query {
+
+}
+
+@include big-tablet-media-query {
+    .course-cards { 
+        display: flex;
+        width: 100%;
+        }
+
+}
+
+
+@include desktop-media-query{
+    .course-cards { 
+    display: flex;
+    }
 }
