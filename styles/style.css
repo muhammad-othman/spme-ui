@@ -200,8 +200,9 @@ header .show-more-icon {
   margin: auto;
   box-shadow: 0px 3px 10px #00000015;
   border-radius: 10px;
-  width: 370px;
-  padding: 0 0.6rem;
+  min-width: 23rem;
+  padding: 0.6rem 0.6rem 1.5rem;
+  margin-bottom: 1.25rem;
 }
 .courses-container .course-cards .course-card .card-img {
   margin: 0.6rem auto;
@@ -260,21 +261,45 @@ header .show-more-icon {
   border-radius: 5px;
   color: #05111E;
   padding: 0.85rem 0;
-  margin-bottom: 1.5rem;
 }
 .courses-container .course-cards .course-card .card-content .light-button img {
   margin: 0.27rem 0.4rem 0 0;
 }
+.courses-container .arrows-move {
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.courses-container .arrows-move img {
+  vertical-align: middle;
+  padding: 0 0.4rem;
+}
 
+@media (min-width: 40em) {
+  .course-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .course-cards .course-card {
+    min-width: 370px;
+  }
+}
 @media (min-width: 62em) {
   .course-cards {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+  }
+  .course-cards .course-card {
+    max-width: 27rem;
+    min-width: 0;
   }
 }
 @media (min-width: 75em) {
   .course-cards {
     display: flex;
+  }
+  .course-cards .course-card {
+    max-width: 23rem;
   }
 }
 * {
