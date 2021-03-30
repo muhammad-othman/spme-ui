@@ -46,9 +46,6 @@ header {
   .show-more-icon {
     cursor: pointer;
   }
-  .show-more-icon:hover{
-    opacity: .8;
-  }
 
   .search-container {
     margin: 0 2.5rem;
@@ -70,7 +67,7 @@ header {
       height: 2.625rem;
       -webkit-mask: url(../assets/search.svg) no-repeat center;
       mask: url(../assets/search.svg) no-repeat center;
-      background-color: $grey-4;
+      background-color: $grey-5;
     }
     .search-icon:hover {
       background-color: $primary;

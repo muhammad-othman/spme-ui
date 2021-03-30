@@ -1,0 +1,91 @@
+.course-cards {
+  .course-card {
+    cursor: pointer;
+    margin: auto;
+    box-shadow: 0px 3px 10px #00000015;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.6rem 0.6rem 1.5rem;
+    margin-bottom: 1.25rem;
+    .card-img {
+      margin: 0.6rem auto;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+      max-height: 14.375rem;
+      img {
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+    .card-content {
+      margin: 0 0.3rem;
+      .trainer {
+        display: flex;
+        margin: 0.8rem 0;
+
+        p {
+          color: $primary;
+          align-self: center;
+        }
+
+        .trainer-img {
+          margin-left: 0.7rem;
+          border-radius: 50%;
+          width: 2.19rem;
+          overflow: hidden;
+          height: 2.19rem;
+
+          img {
+            width: 100%;
+          }
+        }
+    
+      }
+
+      .card-info {
+        ul {
+          display: flex;
+          margin: 1.5rem 0.6rem;
+          .different-item {
+            border-right: 1px solid $grey-3;
+            border-left: 1px solid $grey-3;
+          }
+          li {
+            display: flex;
+            width: 100%;
+            padding: 0 0.85rem;
+            img {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .course-card-button {
+        display: flex;
+        justify-content: center;
+        background: $grey-2;
+        border-radius: 5px;
+        color: $dark-1;
+        padding: 0.85rem 0;
+        .arrow-icon {
+          margin-right: 0.3rem;
+          background: $dark-1;
+        }
+      }
+
+      .course-card-button:hover {
+        background: $white-blue;
+        color: $primary;
+        .arrow-icon {
+          background: $primary;
+        }
+      }
+    }
+  }
+}
+
+.course-card:hover {
+  box-shadow: 0 3px 10px 3px #cccccc;
+}

@@ -3,6 +3,8 @@
 @import "header-style.scss";
 @import "main-banner.scss";
 @import "courses-containar.scss";
+@import "course-card.scss";
+@import "why-spme.scss";
 
 * {
   direction: rtl;
@@ -30,7 +32,7 @@
 input {
   border: none;
   border-radius: 5px;
-  background-color: $grey-2;
+  background-color: $grey-1;
 }
 
 .outlined-button {
@@ -53,7 +55,7 @@ input {
   color: $white;
 }
 
-.selected-button:hover{
+.selected-button:hover {
   opacity: 0.9;
 }
 
@@ -75,19 +77,52 @@ li {
   list-style-type: none;
 }
 
+h1 {
+  font-size: 2.875rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+.common-title {
+  text-align: center;
+}
+
 .common-paragraph {
   padding-top: 0.625rem;
   opacity: 50%;
   line-height: 1.6rem;
 }
 
-.top-info a:hover,
-.arrows-move img:hover {
-  opacity: 0.5;
-}
-
 .flex-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.arrow-icon {
+  -webkit-mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+  mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+  background: $primary;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  width: 0.9rem;
+}
+
+.active-arrow-icon {
+  -webkit-mask: url(../assets/expanded-left-arrow.svg) no-repeat bottom;
+  mask: url(../assets/expanded-left-arrow.svg) no-repeat bottom;
+}
+
+.arrow-icon-right {
+  transform: rotate(180deg);
 }
