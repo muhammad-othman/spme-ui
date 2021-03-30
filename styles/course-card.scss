@@ -46,15 +46,15 @@
       .card-info {
         ul {
           display: flex;
-          margin: 1.5rem 0.6rem;
+          margin: 1.5rem auto;
           .different-item {
             border-right: 1px solid $grey-3;
             border-left: 1px solid $grey-3;
           }
           li {
             display: flex;
+            justify-content: center;
             width: 100%;
-            padding: 0 0.85rem;
             img {
               margin-left: 0.5rem;
             }

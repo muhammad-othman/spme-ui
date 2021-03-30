@@ -97,10 +97,13 @@ h4 {
   text-align: center;
 }
 
-.common-paragraph {
-  padding-top: 0.625rem;
-  opacity: 50%;
+p {
+  margin: 0.625rem 0;
   line-height: 1.6rem;
+}
+
+.common-paragraph {
+  opacity: 50%;
 }
 
 .flex-div {

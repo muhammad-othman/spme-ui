@@ -222,20 +222,18 @@ header .show-more-icon {
   background-color: #ff7c00;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 62em) {
   .course-cards {
     display: flex;
     flex-wrap: wrap;
   }
-}
-@media (min-width: 62em) {
   .course-cards .course-card {
-    max-width: 50%;
+    max-width: 48%;
   }
 }
 @media (min-width: 75em) {
   .course-cards .course-card {
-    max-width: 33%;
+    max-width: 32%;
   }
 }
 .course-cards .course-card {
@@ -281,7 +279,7 @@ header .show-more-icon {
 }
 .course-cards .course-card .card-content .card-info ul {
   display: flex;
-  margin: 1.5rem 0.6rem;
+  margin: 1.5rem auto;
 }
 .course-cards .course-card .card-content .card-info ul .different-item {
   border-right: 1px solid #d1d1d1;
@@ -289,8 +287,8 @@ header .show-more-icon {
 }
 .course-cards .course-card .card-content .card-info ul li {
   display: flex;
+  justify-content: center;
   width: 100%;
-  padding: 0 0.85rem;
 }
 .course-cards .course-card .card-content .card-info ul li img {
   margin-left: 0.5rem;
@@ -319,6 +317,46 @@ header .show-more-icon {
   box-shadow: 0 3px 10px 3px #cccccc;
 }
 
+.why-spme {
+  background-image: url(../assets/peaple.png);
+  background-size: cover;
+}
+.why-spme .why-spme-background {
+  background-color: #003185;
+  opacity: 0.9;
+}
+.why-spme .why-spme-background .why-spme-content {
+  padding: 4.2rem 0;
+}
+.why-spme .why-spme-background .why-spme-content div {
+  color: white;
+}
+.why-spme .why-spme-background .why-spme-content .why-spme-items .why-spme-item {
+  margin: auto;
+  background-color: #397bde;
+  border-radius: 15px;
+  margin-top: 1.8rem;
+  padding: 2.8rem 1.8rem;
+  text-align: center;
+}
+.why-spme .common-title p {
+  opacity: 0.7;
+}
+
+@media (min-width: 62em) {
+  .why-spme-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .why-spme-items .why-spme-item {
+    max-width: 47%;
+  }
+}
+@media (min-width: 75em) {
+  .why-spme-items .why-spme-item {
+    max-width: 30%;
+  }
+}
 * {
   direction: rtl;
   margin: 0;
@@ -410,10 +448,13 @@ h4 {
   text-align: center;
 }
 
-.common-paragraph {
-  padding-top: 0.625rem;
-  opacity: 50%;
+p {
+  margin: 0.625rem 0;
   line-height: 1.6rem;
+}
+
+.common-paragraph {
+  opacity: 50%;
 }
 
 .flex-div {

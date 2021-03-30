@@ -1,0 +1,49 @@
+.why-spme {
+  background-image: url(../assets/peaple.png);
+  background-size: cover;
+  .why-spme-background {
+    background-color: $dark-blue;
+    opacity: 0.9;
+    .why-spme-content {
+      padding: 4.2rem 0;
+      div {
+        color: white;
+      }
+      .why-spme-items {
+        .why-spme-item {
+          margin: auto;
+          background-color: $info;
+          border-radius: 15px;
+          margin-top: 1.8rem;
+          padding: 2.8rem 1.8rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .common-title p {
+    opacity: 0.7;
+  }
+}
+
+@include tablet-media-query {
+}
+
+@include big-tablet-media-query {
+  .why-spme-items {
+    display: flex;
+
+    flex-wrap: wrap;
+    .why-spme-item {
+      max-width: 47%;
+    }
+  }
+}
+
+@include desktop-media-query {
+  .why-spme-items {
+    .why-spme-item {
+      max-width: 30%;
+    }
+  }
+}

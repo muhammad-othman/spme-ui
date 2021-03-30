@@ -51,16 +51,15 @@
 }
 
 @include tablet-media-query {
-  .course-cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
+
 
 @include big-tablet-media-query {
   .course-cards {
+    display: flex;
+    flex-wrap: wrap;
     .course-card {
-      max-width: 50%;
+      max-width: 48%;
     }
   }
 }
@@ -68,7 +67,7 @@
 @include desktop-media-query {
   .course-cards {
     .course-card {
-      max-width: 33%;
+      max-width: 32%;
     }
   }
 }
