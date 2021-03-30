@@ -103,6 +103,10 @@
       }
     }
   }
+
+  .course-card:hover {
+    box-shadow: 0 3px 10px 3px #cccccc;
+  }
   .arrows-move {
     line-height: 20px;
     text-align: center;

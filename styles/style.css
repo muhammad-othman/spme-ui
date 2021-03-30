@@ -265,6 +265,9 @@ header .show-more-icon {
 .courses-container .course-cards .course-card .card-content .light-button img {
   margin: 0.27rem 0.4rem 0 0;
 }
+.courses-container .course-card:hover {
+  box-shadow: 0 3px 10px 3px #cccccc;
+}
 .courses-container .arrows-move {
   line-height: 20px;
   text-align: center;
@@ -351,9 +354,8 @@ input {
   color: #FFFFFF;
 }
 
-.selected-button:hover,
-.course-card:hover {
-  opacity: 0.8;
+.selected-button:hover {
+  opacity: 0.9;
 }
 
 .text-button {
