@@ -6,6 +6,7 @@
     opacity: 0.9;
     .why-spme-content {
       padding: 4.2rem 0;
+
       div {
         color: white;
       }
@@ -17,6 +18,12 @@
           margin-top: 1.8rem;
           padding: 2.8rem 1.8rem;
           text-align: center;
+          h3{
+            margin-top: 1.5rem;
+          }
+          p {
+            margin-top: 1rem;
+          }
         }
       }
     }
