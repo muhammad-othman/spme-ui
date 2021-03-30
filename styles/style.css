@@ -351,7 +351,8 @@ input {
   color: #FFFFFF;
 }
 
-.selected-button:hover {
+.selected-button:hover,
+.course-card:hover {
   opacity: 0.8;
 }
 
@@ -377,6 +378,11 @@ li {
   padding-top: 0.625rem;
   opacity: 50%;
   line-height: 1.6rem;
+}
+
+.top-info a:hover,
+.arrows-move img:hover {
+  opacity: 0.5;
 }
 
 .flex-div {
