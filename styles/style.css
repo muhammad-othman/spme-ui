@@ -134,7 +134,7 @@ header .show-more-icon {
   align-self: center;
   justify-content: center;
   padding: 0.6rem 0 0.75rem 0;
-  width: 140px;
+  width: 8.75rem;
   margin: 1.25rem auto;
 }
 .main-banner a img {
@@ -348,8 +348,8 @@ header .show-more-icon {
 }
 .articles-section .articles-content .common-cards .common-card .date-of-course {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1.25rem;
+  right: 1.25rem;
   text-align: center;
   padding: 0.25rem 0.625rem;
   border: 1px solid #265FA9;
@@ -408,6 +408,44 @@ header .show-more-icon {
   margin-left: 0.5rem;
 }
 
+.partners {
+  background-color: #8080800F;
+}
+.partners .partners-content {
+  padding: 2.2rem 0;
+}
+.partners .partners-content .partners-items {
+  margin: 3.3rem 0;
+}
+.partners .partners-content .partners-items .partners-item {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px #00000015;
+  background-color: #ffffff;
+  padding: 2.25rem 0;
+  text-align: center;
+}
+.partners .partners-content .partners-items .partners-item:hover {
+  box-shadow: 0 3px 10px 3px #cccccc;
+}
+
+@media (min-width: 40em) {
+  .partners-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .partners-items .partners-item {
+    max-width: 47%;
+    margin: auto;
+  }
+}
+@media (min-width: 62em) {
+  .partners-items .partners-item {
+    max-width: 23%;
+  }
+}
 * {
   direction: rtl;
   margin: 0;
