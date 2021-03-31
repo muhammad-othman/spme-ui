@@ -187,19 +187,6 @@ header .show-more-icon {
 .courses-container .top-info .title-info {
   margin-left: 3.5rem;
 }
-.courses-container .top-info .see-more-courses {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  min-width: 7rem;
-  color: #115faf;
-}
-.courses-container .top-info .see-more-courses:hover {
-  color: #ff7c00;
-}
-.courses-container .top-info .see-more-courses:hover .arrow-icon {
-  background: #ff7c00;
-}
 .courses-container .navigate-courses {
   display: flex;
   justify-content: center;
@@ -222,21 +209,7 @@ header .show-more-icon {
   background-color: #ff7c00;
 }
 
-@media (min-width: 62em) {
-  .course-cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .course-cards .course-card {
-    max-width: 48%;
-  }
-}
-@media (min-width: 75em) {
-  .course-cards .course-card {
-    max-width: 32%;
-  }
-}
-.course-cards .course-card {
+.common-card {
   cursor: pointer;
   margin: auto;
   box-shadow: 0px 3px 10px #00000015;
@@ -245,55 +218,38 @@ header .show-more-icon {
   padding: 0.6rem 0.6rem 1.5rem;
   margin-bottom: 1.25rem;
 }
-.course-cards .course-card .card-img {
-  margin: 0.6rem auto;
+.common-card .card-img {
   text-align: center;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   max-height: 14.375rem;
 }
-.course-cards .course-card .card-img img {
+.common-card .card-img img {
   min-width: 100%;
   min-height: 100%;
 }
-.course-cards .course-card .card-content {
+.common-card .card-content {
   margin: 0 0.3rem;
 }
-.course-cards .course-card .card-content .trainer {
+.common-card .card-content .trainer {
   display: flex;
   margin: 0.8rem 0;
 }
-.course-cards .course-card .card-content .trainer p {
+.common-card .card-content .trainer p {
   color: #115faf;
   align-self: center;
 }
-.course-cards .course-card .card-content .trainer .trainer-img {
+.common-card .card-content .trainer .trainer-img {
   margin-left: 0.7rem;
   border-radius: 50%;
   width: 2.19rem;
   overflow: hidden;
   height: 2.19rem;
 }
-.course-cards .course-card .card-content .trainer .trainer-img img {
+.common-card .card-content .trainer .trainer-img img {
   width: 100%;
 }
-.course-cards .course-card .card-content .card-info ul {
-  display: flex;
-  margin: 1.5rem auto;
-}
-.course-cards .course-card .card-content .card-info ul .different-item {
-  border-right: 1px solid #d1d1d1;
-  border-left: 1px solid #d1d1d1;
-}
-.course-cards .course-card .card-content .card-info ul li {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.course-cards .course-card .card-content .card-info ul li img {
-  margin-left: 0.5rem;
-}
-.course-cards .course-card .card-content .course-card-button {
+.common-card .card-content .common-card-button {
   display: flex;
   justify-content: center;
   background: #f1f1f1;
@@ -301,22 +257,36 @@ header .show-more-icon {
   color: #05111e;
   padding: 0.85rem 0;
 }
-.course-cards .course-card .card-content .course-card-button .arrow-icon {
+.common-card .card-content .common-card-button .arrow-icon {
   margin-right: 0.3rem;
   background: #05111e;
 }
-.course-cards .course-card .card-content .course-card-button:hover {
+.common-card .card-content .common-card-button:hover {
   background: #ddeaf9;
   color: #115faf;
 }
-.course-cards .course-card .card-content .course-card-button:hover .arrow-icon {
+.common-card .card-content .common-card-button:hover .arrow-icon {
   background: #115faf;
 }
 
-.course-card:hover {
+.common-card:hover {
   box-shadow: 0 3px 10px 3px #cccccc;
 }
 
+@media (min-width: 62em) {
+  .common-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .common-cards .common-card {
+    max-width: 48%;
+  }
+}
+@media (min-width: 75em) {
+  .common-cards .common-card {
+    max-width: 32%;
+  }
+}
 .why-spme {
   background-image: url(../assets/peaple.png);
   background-size: cover;
@@ -363,6 +333,81 @@ header .show-more-icon {
     max-width: 30%;
   }
 }
+.articles-section .articles-content {
+  padding: 4.2rem 0;
+}
+.articles-section .articles-content .common-cards {
+  margin: 3rem 0;
+}
+.articles-section .articles-content .common-cards .common-card {
+  position: relative;
+  box-shadow: none;
+  padding: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.articles-section .articles-content .common-cards .common-card .date-of-course {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid #265FA9;
+  width: 2.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #115faf;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.articles-section .articles-content .common-cards .common-card .card-content {
+  margin: 0 1rem;
+}
+.articles-section .articles-content .common-cards .common-card .card-content .card-info li {
+  margin-left: 5%;
+  justify-content: right;
+}
+.articles-section .articles-content .common-cards .common-card .card-content .see-more-courses {
+  color: #05111e;
+  justify-content: flex-end;
+}
+.articles-section .articles-content .common-cards .common-card .card-content .see-more-courses span {
+  margin-left: 0.8rem;
+}
+.articles-section .articles-content .common-cards .common-card .card-content .see-more-courses .arrow-icon {
+  background: #05111e;
+}
+.articles-section .articles-content .common-cards .common-card .card-content .see-more-courses:hover {
+  color: #115faf;
+}
+.articles-section .articles-content .common-cards .common-card .card-content .see-more-courses:hover .arrow-icon {
+  background: #115faf;
+}
+.articles-section .articles-content .common-cards .common-card:hover {
+  box-shadow: 0 3px 10px 3px #cccccc;
+}
+
+.articles-content .articles-cards .course-card:hover {
+  box-shadow: none;
+}
+
+.card-info ul {
+  display: flex;
+  margin: 1.5rem auto;
+}
+.card-info ul .different-item {
+  border: 0;
+}
+.card-info ul li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-left: 1px solid #d1d1d1;
+}
+.card-info ul li img {
+  margin-left: 0.5rem;
+}
+
 * {
   direction: rtl;
   margin: 0;
@@ -485,6 +530,21 @@ p {
 
 .arrow-icon-right {
   transform: rotate(180deg);
+}
+
+.see-more-courses {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  min-width: 7rem;
+  color: #115faf;
+}
+
+.see-more-courses:hover {
+  color: #ff7c00;
+}
+.see-more-courses:hover .arrow-icon {
+  background: #ff7c00;
 }
 
 /*# sourceMappingURL=style.css.map */

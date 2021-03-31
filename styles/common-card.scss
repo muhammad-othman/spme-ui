@@ -1,5 +1,5 @@
-.course-cards {
-  .course-card {
+
+  .common-card {
     cursor: pointer;
     margin: auto;
     box-shadow: 0px 3px 10px #00000015;
@@ -8,7 +8,6 @@
     padding: 0.6rem 0.6rem 1.5rem;
     margin-bottom: 1.25rem;
     .card-img {
-      margin: 0.6rem auto;
       text-align: center;
       border-radius: 10px 10px 0 0;
       overflow: hidden;
@@ -43,26 +42,9 @@
     
       }
 
-      .card-info {
-        ul {
-          display: flex;
-          margin: 1.5rem auto;
-          .different-item {
-            border-right: 1px solid $grey-3;
-            border-left: 1px solid $grey-3;
-          }
-          li {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            img {
-              margin-left: 0.5rem;
-            }
-          }
-        }
-      }
 
-      .course-card-button {
+
+      .common-card-button {
         display: flex;
         justify-content: center;
         background: $grey-2;
@@ -75,7 +57,7 @@
         }
       }
 
-      .course-card-button:hover {
+      .common-card-button:hover {
         background: $white-blue;
         color: $primary;
         .arrow-icon {
@@ -84,8 +66,27 @@
       }
     }
   }
+
+.common-card:hover {
+  box-shadow: 0 3px 10px 3px #cccccc;
 }
 
-.course-card:hover {
-  box-shadow: 0 3px 10px 3px #cccccc;
+
+
+@include big-tablet-media-query {
+  .common-cards {
+    display: flex;
+    flex-wrap: wrap;
+    .common-card {
+      max-width: 48%;
+    }
+  }
+}
+
+@include desktop-media-query {
+  .common-cards {
+    .common-card {
+      max-width: 32%;
+    }
+  }
 }

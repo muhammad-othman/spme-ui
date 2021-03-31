@@ -3,8 +3,10 @@
 @import "header-style.scss";
 @import "main-banner.scss";
 @import "courses-containar.scss";
-@import "course-card.scss";
+@import "common-card.scss";
 @import "why-spme.scss";
+@import "articles.scss";
+@import "card-info.scss";
 
 * {
   direction: rtl;
@@ -128,4 +130,18 @@ p {
 
 .arrow-icon-right {
   transform: rotate(180deg);
+}
+.see-more-courses {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  min-width: 7rem;
+  color: $primary;
+}
+
+.see-more-courses:hover {
+  color: $secondary;
+  .arrow-icon {
+    background: $secondary;
+  }
 }

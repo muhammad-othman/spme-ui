@@ -39,7 +39,6 @@
 @include big-tablet-media-query {
   .why-spme-items {
     display: flex;
-
     flex-wrap: wrap;
     .why-spme-item {
       max-width: 47%;

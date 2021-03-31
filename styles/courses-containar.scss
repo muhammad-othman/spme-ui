@@ -11,20 +11,7 @@
       margin-left: 3.5rem;
     }
 
-    .see-more-courses {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      min-width: 7rem;
-      color: $primary;
-    }
-
-    .see-more-courses:hover {
-      color: $secondary;
-      .arrow-icon {
-        background: $secondary;
-      }
-    }
+    
   }
 
   .navigate-courses {
@@ -54,20 +41,3 @@
 }
 
 
-@include big-tablet-media-query {
-  .course-cards {
-    display: flex;
-    flex-wrap: wrap;
-    .course-card {
-      max-width: 48%;
-    }
-  }
-}
-
-@include desktop-media-query {
-  .course-cards {
-    .course-card {
-      max-width: 32%;
-    }
-  }
-}

@@ -1,0 +1,61 @@
+.articles-section {
+  .articles-content {
+    padding: 4.2rem 0;
+
+    .common-cards {
+      margin: 3rem 0;
+      .common-card {
+        position: relative;
+        box-shadow: none;
+        padding: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        .date-of-course{
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          text-align: center;
+          padding: .25rem .625rem;
+          border: 1px solid $dark-blue-2;
+          width: 2.8rem;
+          border-radius: 5px;
+          font-size: 1rem;
+          color: $primary;
+          font-weight: bold;
+          line-height: 1.1;
+        }
+        .card-content {
+          margin: 0 1rem;
+          .card-info {
+            li {
+              margin-left: 5%;
+              justify-content: right;
+            }
+          }
+          .see-more-courses {
+            color: $dark-1;
+            justify-content: flex-end;
+            span {
+              margin-left: .8rem;
+            }
+            .arrow-icon {
+              background: $dark-1;
+            }
+          }
+          .see-more-courses:hover {
+            color: $primary;
+            .arrow-icon {
+              background: $primary;
+            }
+          }
+        }
+      }
+      .common-card:hover {
+        box-shadow: 0 3px 10px 3px #cccccc;
+      }
+    }
+  }
+}
+.articles-content .articles-cards .course-card:hover {
+  box-shadow: none;
+}
