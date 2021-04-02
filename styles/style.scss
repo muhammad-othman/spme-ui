@@ -8,13 +8,17 @@
 @import "articles.scss";
 @import "card-info.scss";
 @import "partners.scss";
+@import "footer.scss";
 
 * {
-  direction: rtl;
   margin: 0;
   padding: 0;
   font-family: Almarai, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+}
+
+.arabic-container {
+  direction: rtl;
 }
 
 .container {
@@ -30,6 +34,10 @@
   font-weight: bold;
   display: inline-block;
   padding: 0.625rem 0;
+}
+
+.activable-item:active {
+  opacity: 0.8 !important;
 }
 
 input {

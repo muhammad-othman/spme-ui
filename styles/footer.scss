@@ -1,0 +1,161 @@
+.top-footer-part {
+  background: $dark-2;
+  color: $white;
+  padding: 2.6rem 0;
+  .footer-content {
+    .subscribe {
+      margin-bottom: 2.5rem;
+      h4 {
+        margin-top: 1.6rem;
+      }
+      .subscribe-search-container {
+        margin: 0.7rem 0;
+        position: relative;
+        .search {
+          width: 100%;
+          height: 3rem;
+          padding: 0.625rem;
+          font-size: 1rem;
+          padding-left: 5.8rem;
+        }
+        .subscribe-search-icon {
+          position: absolute;
+          left: 0;
+          height: 3rem;
+          padding: 0.9rem 1.25rem;
+          cursor: pointer;
+          background-color: $primary;
+          border-radius: 5px 0px 0px 5px;
+        }
+        .subscribe-search-icon:hover {
+          background: $secondary;
+        }
+      }
+    }
+    .quick-links {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 2.5rem;
+    }
+    .contact-content {
+      margin-bottom: 2.5rem;
+      text-align: center;
+      .contact-item {
+        display: inline-block;
+      }
+      .app-links {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+  .quick-link {
+    margin: 0.9rem 0;
+    cursor: pointer;
+    display: flex;
+    font-size: 0.875rem;
+
+    justify-content: right;
+    &:hover {
+      color: $secondary;
+      text-decoration: underline;
+      .icon {
+        background-color: $secondary;
+      }
+    }
+  }
+  .double-arrow,
+  .link-icon,
+  .app-icon {
+    -webkit-mask: url(../assets/double-arrows.svg) no-repeat center;
+    mask: url(../assets/double-arrows.svg) no-repeat center;
+    background: $white;
+    margin-left: 0.5rem;
+    width: 0.5rem;
+  }
+  .link-icon {
+    width: 0.9rem;
+    background: $secondary;
+  }
+
+  .map {
+    -webkit-mask: url(../assets/map.svg) no-repeat center;
+    mask: url(../assets/map.svg) no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  .phone {
+    -webkit-mask: url(../assets/phone.svg) no-repeat center;
+    mask: url(../assets/phone.svg) no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  .email {
+    -webkit-mask: url(../assets/email.svg) no-repeat center;
+    mask: url(../assets/email.svg) no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  .app-icon {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-left: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+
+  .facebook {
+    -webkit-mask: url(../assets/facebook.svg) no-repeat center;
+    mask: url(../assets/facebook.svg) no-repeat center;
+  }
+
+  .whatsapp {
+    -webkit-mask: url(../assets/whatsapp.svg) no-repeat center;
+    mask: url(../assets/whatsapp.svg) no-repeat center;
+  }
+
+  .instagram {
+    -webkit-mask: url(../assets/instagram.svg) no-repeat center;
+    mask: url(../assets/instagram.svg) no-repeat center;
+  }
+}
+
+.bottom-footer-part {
+  background-color: $dark-3;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.5rem 0;
+  color: $white;
+}
+
+@include big-tablet-media-query {
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .quick-links {
+      min-width: 18rem;
+    }
+  }
+}
+
+@include desktop-media-query {
+  .footer-content {
+    .subscribe,
+    .quick-links {
+      margin-left: 4.9rem;
+    }
+  }
+}

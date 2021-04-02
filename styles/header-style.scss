@@ -66,6 +66,7 @@ header {
       width: 2.625rem;
       height: 2.625rem;
       -webkit-mask: url(../assets/search.svg) no-repeat center;
+      -ms-mask: url(../assets/search.svg) no-repeat center;
       mask: url(../assets/search.svg) no-repeat center;
       background-color: $grey-5;
     }
