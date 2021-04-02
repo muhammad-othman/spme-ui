@@ -9,6 +9,7 @@
 @import "card-info.scss";
 @import "partners.scss";
 @import "footer.scss";
+@import "icons.scss";
 
 * {
   margin: 0;
@@ -134,13 +135,7 @@ p {
   transform: rotate(180deg);
 }
 
-.arabic-container {
-  .arrow-icon {
-    -webkit-mask: url(../assets/blue-arrow.svg) no-repeat bottom;
-    mask: url(../assets/blue-arrow.svg) no-repeat bottom;
-    transform: unset;
-  }
-}
+
 
 .active-arrow-icon {
   -webkit-mask: url(../assets/expanded-left-arrow.svg) no-repeat bottom;
@@ -148,8 +143,26 @@ p {
 }
 
 .arrow-icon-right {
-  transform: rotate(180deg);
+  transform: unset;
 }
+
+.arabic-container {
+  .arrow-icon {
+    -webkit-mask: url(../assets/blue-arrow.svg) no-repeat center;
+    mask: url(../assets/blue-arrow.svg) no-repeat center;
+    transform: unset;
+  }
+  .active-arrow-icon {
+    -webkit-mask: url(../assets/expanded-left-arrow.svg) no-repeat bottom;
+    mask: url(../assets/expanded-left-arrow.svg) no-repeat bottom;
+    transform: unset;
+  }
+
+  .arrow-icon-right {
+    transform: rotate(180deg);
+  }
+}
+
 .see-more-courses {
   cursor: pointer;
   display: flex;

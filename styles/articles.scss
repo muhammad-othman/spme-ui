@@ -26,17 +26,11 @@
         }
         .card-content {
           margin: 0 1rem;
-          .card-info {
-            li {
-              margin-left: 5%;
-              justify-content: right;
-            }
-          }
           .see-more-courses {
             color: $dark-1;
             justify-content: flex-end;
             span {
-              margin-left: 0.8rem;
+              margin:0 0.8rem;
             }
             .arrow-icon {
               background: $dark-1;

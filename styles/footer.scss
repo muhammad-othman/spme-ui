@@ -14,31 +14,30 @@
         .search {
           width: 100%;
           height: 3rem;
-          padding: 0.625rem;
+          padding: 0.625rem 5.8rem 0.625rem 0.625rem;
           font-size: 1rem;
-          padding-left: 5.8rem;
         }
         .subscribe-search-icon {
           position: absolute;
-          left: 0;
+          right: 0;
           height: 3rem;
           padding: 0.9rem 1.25rem;
           cursor: pointer;
           background-color: $primary;
-          border-radius: 5px 0px 0px 5px;
+          border-radius: 0px 5px 5px 0px;
         }
         .subscribe-search-icon:hover {
           background: $secondary;
         }
       }
     }
+
     .quick-links {
       display: flex;
       justify-content: space-around;
       margin-bottom: 2.5rem;
     }
     .contact-content {
-      margin-bottom: 2.5rem;
       text-align: center;
       .contact-item {
         display: inline-block;
@@ -47,19 +46,22 @@
         display: flex;
         justify-content: center;
         margin-top: 2rem;
+        .app-icon {
+          background-color: $white;
+          margin: 0 0.5rem;
+        }
       }
     }
   }
 
   h3 {
-    margin-bottom: 1.5rem;
+    margin:0 .5rem 1.5rem;
   }
   .quick-link {
     margin: 0.9rem 0;
     cursor: pointer;
     display: flex;
     font-size: 0.875rem;
-
     justify-content: right;
     &:hover {
       color: $secondary;
@@ -69,39 +71,18 @@
       }
     }
   }
-  .double-arrow,
-  .link-icon,
-  .app-icon {
+  .double-arrow {
     -webkit-mask: url(../assets/double-arrows.svg) no-repeat center;
     mask: url(../assets/double-arrows.svg) no-repeat center;
     background: $white;
-    margin-left: 0.5rem;
+    margin: 0 0.5rem;
     width: 0.5rem;
+    transform: rotate(180deg);
   }
   .link-icon {
     width: 0.9rem;
     background: $secondary;
-  }
-
-  .map {
-    -webkit-mask: url(../assets/map.svg) no-repeat center;
-    mask: url(../assets/map.svg) no-repeat center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-  }
-
-  .phone {
-    -webkit-mask: url(../assets/phone.svg) no-repeat center;
-    mask: url(../assets/phone.svg) no-repeat center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-  }
-
-  .email {
-    -webkit-mask: url(../assets/email.svg) no-repeat center;
-    mask: url(../assets/email.svg) no-repeat center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    margin: 0 0.5rem;
   }
 
   .app-icon {
@@ -114,20 +95,39 @@
       background-color: $secondary;
     }
   }
+}
 
-  .facebook {
-    -webkit-mask: url(../assets/facebook.svg) no-repeat center;
-    mask: url(../assets/facebook.svg) no-repeat center;
+.top-footer-part {
+  .footer-content {
+    .contact-content {
+      .app-links {
+        .app-icon:hover {
+          background-color: $secondary;
+        }
+      }
+    }
   }
+}
 
-  .whatsapp {
-    -webkit-mask: url(../assets/whatsapp.svg) no-repeat center;
-    mask: url(../assets/whatsapp.svg) no-repeat center;
-  }
-
-  .instagram {
-    -webkit-mask: url(../assets/instagram.svg) no-repeat center;
-    mask: url(../assets/instagram.svg) no-repeat center;
+.arabic-container {
+  .top-footer-part {
+    .footer-content {
+      .subscribe {
+        .subscribe-search-container {
+          .search {
+            padding: 0.625rem 0.625rem 0.625rem 5.8rem;
+          }
+          .subscribe-search-icon {
+            left: 0;
+            right: unset;
+            border-radius: 5px 0px 0px 5px;
+          }
+        }
+      }
+      .double-arrow {
+        transform: unset;
+      }
+    }
   }
 }
 
