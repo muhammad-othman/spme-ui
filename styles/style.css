@@ -20,7 +20,7 @@ header .menu {
   display: none;
   flex-direction: column-reverse;
   box-shadow: 0 2px 5px 0 #00000014;
-  left: 0;
+  right: 0;
   top: 4.3rem;
   background: #ffffff;
   border-radius: 5px;
@@ -52,11 +52,12 @@ header .search-container .search {
   padding: 0.625rem;
   font-size: 0.75rem;
   font-weight: bold;
-  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-left: 0.625rem;
 }
 header .search-container .search-icon {
   position: absolute;
-  left: 0;
+  right: 0;
   cursor: pointer;
   width: 2.625rem;
   height: 2.625rem;
@@ -67,6 +68,19 @@ header .search-container .search-icon {
 }
 header .search-container .search-icon:hover {
   background-color: #115faf;
+}
+
+.arabic-container .search-container .search {
+  padding-left: 2.5rem;
+  padding-right: 0.625rem;
+}
+.arabic-container .search-container .search-icon {
+  left: 0;
+  right: unset;
+}
+.arabic-container .menu {
+  right: unset;
+  left: 0;
 }
 
 @media (min-width: 40em) {
@@ -96,7 +110,11 @@ header .show-more-icon {
     display: none;
   }
   header .logo {
-    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  .arabic-container .logo {
+    margin-left: 1rem;
   }
 }
 @media (min-width: 75em) {
@@ -107,6 +125,10 @@ header .show-more-icon {
     margin-right: 0.94rem;
   }
   header .logo {
+    margin-right: 1.875rem;
+  }
+
+  .arabic-container .logo {
     margin-left: 1.875rem;
   }
 }
@@ -396,17 +418,17 @@ header .show-more-icon {
   display: flex;
   margin: 1.5rem auto;
 }
-.card-info ul .different-item {
-  border: 0;
+.card-info ul li:nth-child(2) {
+  border-left: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
 }
 .card-info ul li {
   display: flex;
   justify-content: center;
   width: 100%;
-  border-left: 1px solid #d1d1d1;
 }
 .card-info ul li img {
-  margin-left: 0.5rem;
+  margin: 0 0.5rem;
 }
 
 .partners {
@@ -707,12 +729,19 @@ p {
 }
 
 .arrow-icon {
-  -webkit-mask: url(../assets/blue-arrow.svg) no-repeat bottom;
-  mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+  -webkit-mask: url(../assets/blue-arrow.svg) no-repeat top;
+  mask: url(../assets/blue-arrow.svg) no-repeat top;
   background: #115faf;
   -webkit-mask-size: contain;
   mask-size: contain;
   width: 0.9rem;
+  transform: rotate(180deg);
+}
+
+.arabic-container .arrow-icon {
+  -webkit-mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+  mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+  transform: unset;
 }
 
 .active-arrow-icon {

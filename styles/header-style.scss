@@ -22,7 +22,7 @@ header {
     display: none;
     flex-direction: column-reverse;
     box-shadow: 0 2px 5px 0 #00000014;
-    left: 0;
+    right: 0;
     top: 4.3rem;
     background: $white;
     border-radius: 5px;
@@ -57,11 +57,12 @@ header {
       padding: 0.625rem;
       font-size: 0.75rem;
       font-weight: bold;
-      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      padding-left: 0.625rem;
     }
     .search-icon {
       position: absolute;
-      left: 0;
+      right: 0;
       cursor: pointer;
       width: 2.625rem;
       height: 2.625rem;
@@ -73,6 +74,23 @@ header {
     .search-icon:hover {
       background-color: $primary;
     }
+  }
+}
+
+.arabic-container {
+  .search-container {
+    .search {
+      padding-left: 2.5rem;
+      padding-right: 0.625rem;
+    }
+    .search-icon {
+      left: 0;
+      right: unset;
+    }
+  }
+  .menu {
+    right: unset;
+    left: 0;
   }
 }
 
@@ -110,7 +128,13 @@ header {
     }
 
     .logo {
-      margin-left: 0.5rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .arabic-container {
+    .logo {
+      margin-left: 1rem;
     }
   }
 }
@@ -127,6 +151,12 @@ header {
       }
     }
 
+    .logo {
+      margin-right: 1.875rem;
+    }
+  }
+
+  .arabic-container {
     .logo {
       margin-left: 1.875rem;
     }

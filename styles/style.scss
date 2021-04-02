@@ -125,12 +125,21 @@ p {
 }
 
 .arrow-icon {
-  -webkit-mask: url(../assets/blue-arrow.svg) no-repeat bottom;
-  mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+  -webkit-mask: url(../assets/blue-arrow.svg) no-repeat top;
+  mask: url(../assets/blue-arrow.svg) no-repeat top;
   background: $primary;
   -webkit-mask-size: contain;
   mask-size: contain;
   width: 0.9rem;
+  transform: rotate(180deg);
+}
+
+.arabic-container {
+  .arrow-icon {
+    -webkit-mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+    mask: url(../assets/blue-arrow.svg) no-repeat bottom;
+    transform: unset;
+  }
 }
 
 .active-arrow-icon {

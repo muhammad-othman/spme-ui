@@ -1,18 +1,19 @@
 .card-info {
-    ul {
+  ul {
+    display: flex;
+    margin: 1.5rem auto;
+    li:nth-child(2) {
+      border-left: 1px solid $grey-3;
+      border-right: 1px solid $grey-3;
+    }
+    li {
       display: flex;
-      margin: 1.5rem auto;
-      .different-item {
-       border: 0;
-      }
-      li {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        border-left: 1px solid $grey-3;
-        img {
-          margin-left: 0.5rem;
-        }
+      justify-content: center;
+      width: 100%;
+
+      img {
+        margin:0 0.5rem;
       }
     }
   }
+}
