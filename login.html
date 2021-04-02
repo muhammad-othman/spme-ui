@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SPME - Special Progam for Material Education</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="arabic-container">
+    <header>
+        <div class="container flex-div">
+            <a href="/index.html">
+                <img class="logo" src="assets/logo.svg">
+            </a>
+            <div class="search-container">
+                <div class="search-icon"></div>
+                <input class="search" type="text" placeholder="ابحث عن دورة">
+            </div>
+            <nav>
+                <input class="show-more-checkbox" id="show-more-checkbox" type="checkbox">
+                <ul class="menu">
+                    <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
+                            href="#">تحقق من شهادة</a></li>
+                    <li><a id="changeLanguageButton" class="button activable-item text-button"
+                            onClick="changeLanguage()">English</a></li>
+                    <li><a id="loginButton" class="button activable-item outlined-button" href="/login.html">تسجيل
+                            الدخول</a></li>
+                    <li><a id="registerButton" class="button activable-item primary-button" href="#">حساب جديد</a></li>
+                </ul>
+                <label for="show-more-checkbox" class="show-more-icon">
+                    <img src="assets/menu-icon.svg">
+                </label>
+            </nav>
+    </header>
+    <h1>Login</h1>
+    <footer>
+        <div class="top-footer-part">
+            <div class="footer-content container">
+                <div class="subscribe">
+                    <img src="assets/logo-white.png">
+                    <p class="common-paragraph">
+                        هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
+                    </p>
+                    <h4>اشترك لتصلك الدورات الجديدة</h4>
+                    <div class="subscribe-search-container">
+                        <div class="subscribe-search-icon activable-item">اشترك</div>
+                        <input class="search" type="text" placeholder="برجاء ادخال البريد الألكتروني">
+                    </div>
+                </div>
+                <div class="quick-links">
+                    <div class="quick-links-item">
+                        <h3>روابط سريعة</h3>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الفترات التدريبية</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الدورات التدريبية</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الأسئلة الشائعة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>تواصل معنا</a>
+                        </div>
+                    </div>
+                    <div class="quick-links-item">
+                        <h3>روابط سريعة</h3>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>تحقق من شهادة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>المدونة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>من نحن</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>شروط الاستخدام</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <h3>تواصل معنا</h3>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon map icon"></div>
+                            <a>العنوان هنا بالتفصيل</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon phone icon"></div>
+                            <a>123456789</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon email icon"></div>
+                            <a>info@name.com.sa</a>
+                        </div>
+                    </div>
+                    <div class="app-links">
+                        <div class="app-icon activable-item facebook"></div>
+                        <div class="app-icon activable-item whatsapp"></div>
+                        <div class="app-icon activable-item instagram"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer-part">
+            جميع الحقوق محفوظة لموقع SMPE
+        </div>
+
+    </footer>
+
+
+    <script>
+        function changeLanguage(event) {
+            var body = document.getElementsByTagName("body")[0];
+            body.classList.toggle("arabic-container");
+            if (document.getElementById('changeLanguageButton').innerText == 'العربية') {
+                document.getElementById('verifyCertificateButton').innerText = 'تحقق من شهادة'
+                document.getElementById('loginButton').innerText = 'تسجيل الدخول'
+                document.getElementById('registerButton').innerText = 'حساب جديد'
+                document.getElementById('changeLanguageButton').innerText = 'English'
+            }
+            else {
+                document.getElementById('verifyCertificateButton').innerText = 'Verify Certificate'
+                document.getElementById('loginButton').innerText = 'Log In'
+                document.getElementById('registerButton').innerText = 'Sign Up'
+                document.getElementById('changeLanguageButton').innerText = 'العربية'
+            }
+        }
+    </script>
+</body>
+
+</html>
