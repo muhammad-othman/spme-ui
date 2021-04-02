@@ -616,6 +616,7 @@ header .show-more-icon {
   font-weight: bold;
   display: inline-block;
   padding: 0.625rem 0;
+  cursor: pointer;
 }
 
 .activable-item:active {
