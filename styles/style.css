@@ -142,6 +142,9 @@ header .show-more-icon {
 .main-banner .head-info {
   padding: 0.625rem;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main-banner .head-info h1 {
   font-size: 2.875rem;
@@ -154,14 +157,14 @@ header .show-more-icon {
 }
 .main-banner a {
   display: flex;
-  align-self: center;
   justify-content: center;
-  padding: 0.6rem 0 0.75rem 0;
-  width: 8.75rem;
+  padding: 0.6rem 1.5rem 0.75rem 1.5rem;
   margin: 1.25rem auto;
 }
-.main-banner a img {
-  margin: 0.27rem 0.9rem 0 0;
+.main-banner a .arrow-icon {
+  margin: 0 0.5rem;
+  background-color: #ffffff;
+  height: 1rem;
 }
 .main-banner .banner-img {
   margin-top: 1.875rem;
@@ -176,20 +179,27 @@ header .show-more-icon {
 }
 @media (min-width: 62em) {
   .main-banner .container {
-    text-align: right;
+    text-align: left;
     padding: 5.65rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .main-banner .container p {
+  .main-banner .container .head-info {
+    align-items: start;
+  }
+  .main-banner .container .head-info p {
     padding: 0;
   }
-  .main-banner .container a {
+  .main-banner .container .head-info a {
     margin: 1.25rem 0 0 0;
   }
   .main-banner .banner-img {
     width: 31.25rem;
+  }
+
+  .arabic-container .main-banner .container {
+    text-align: right;
   }
 }
 @media (min-width: 75em) {
@@ -281,7 +291,7 @@ header .show-more-icon {
   padding: 0.85rem 0;
 }
 .common-card .card-content .common-card-button .arrow-icon {
-  margin-right: 0.3rem;
+  margin: 0 0.3rem;
   background: #05111e;
 }
 .common-card .card-content .common-card-button:hover {

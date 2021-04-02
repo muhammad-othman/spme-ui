@@ -8,6 +8,9 @@
   .head-info {
     padding: 0.625rem;
     color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
       font-size: 2.875rem;
@@ -22,13 +25,13 @@
   }
   a {
     display: flex;
-    align-self: center;
     justify-content: center;
-    padding: 0.6rem 0 0.75rem 0;
-    width: 8.75rem;
-    margin: 1.25rem  auto;
-    img {
-      margin: 0.27rem 0.9rem 0 0;
+    padding: 0.6rem 1.5rem 0.75rem 1.5rem;
+    margin: 1.25rem auto;
+    .arrow-icon {
+      margin: 0 0.5rem;
+      background-color: $white;
+      height: 1rem;
     }
   }
 
@@ -50,21 +53,31 @@
 @include big-tablet-media-query {
   .main-banner {
     .container {
-      text-align: right;
+      text-align: left;
       padding: 5.65rem 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      p {
-        padding: 0;
-      }
-      a{
-        margin: 1.25rem 0 0 0;
+      .head-info {
+        align-items: start;
+        p {
+          padding: 0;
+        }
+        a {
+          margin: 1.25rem 0 0 0;
+        }
       }
     }
 
     .banner-img {
       width: 31.25rem;
+    }
+  }
+  .arabic-container {
+    .main-banner {
+      .container {
+        text-align: right;
+      }
     }
   }
 }
