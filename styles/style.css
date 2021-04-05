@@ -758,6 +758,10 @@ header .show-more-icon {
   text-align: right;
 }
 
+.confirm {
+  margin-top: 1.8rem;
+}
+
 .arabic-container .login-content .right-part .login-input .password-container .see-icon {
   right: unset;
   left: 0;
