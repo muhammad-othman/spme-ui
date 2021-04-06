@@ -1,4 +1,4 @@
-.login-title-content {
+.common-title-content {
   background-image: url(../assets/gray-background.svg);
   padding: 1.6rem 0;
 }
@@ -6,8 +6,8 @@
 .login-content {
   border: 1px solid $grey-7;
   border-radius: 1.25rem;
-  margin-top: 2.8rem !important;
-  margin-bottom: 2.8rem !important;
+  margin-top: 2.75rem;
+  margin-bottom: 2.75rem;
   .left-part {
     background: $primary;
     display: flex;
@@ -22,54 +22,95 @@
   .right-part {
     padding: 2.8rem 3rem 1rem;
     text-align: center;
+    .login-title {
+      margin-bottom: 1rem;
+    }
     .login-input {
       display: flex;
       flex-direction: column;
 
-      label {
-        margin: 1.8rem 0 1rem;
+      .form-input {
         text-align: left;
-      }
-      .search {
+        margin-top: 1rem;
         width: 100%;
-        height: 3rem;
-        padding: 0.625rem 1.5rem 0.625rem 0.625rem;
-        font-size: 0.8rem;
-      }
-      .password-container {
-        position: relative;
-        .see-icon {
-          position: absolute;
-          right: 0;
-          height: 3rem;
-          padding: 0.9rem 1.25rem;
-          cursor: pointer;
-          background-color: $black;
-          -webkit-mask: url(../assets/Icon-eye.svg) no-repeat center;
-          mask: url(../assets/Icon-eye.svg) no-repeat center;
+
+        .input-label {
+          font-size: 1rem;
         }
-        .see-icon:hover {
-          background: $secondary;
+        .input-container {
+          position: relative;
+
+          input {
+            width: 100%;
+            height: 3rem;
+            padding: 0 1.5rem;
+            margin: 1.125rem 0;
+            padding-right: 3rem;
+          }
+          .input-icon {
+            position: absolute;
+            right: 0;
+            top: 1.2rem;
+            height: 3rem;
+            width: 3rem;
+            cursor: pointer;
+            background-color: $black;
+            -webkit-mask: url(../assets/Icon-eye.svg) no-repeat center;
+            mask: url(../assets/Icon-eye.svg) no-repeat center;
+          }
+          .input-icon:hover {
+            background: $secondary;
+          }
         }
       }
-      .password-details {
+
+      .forget-password {
         text-align: right;
-        margin: 1.25rem 0px;
+        margin-bottom: 1.25rem;
         cursor: pointer;
-        &:hover{
+        margin: 0;
+        a {
+          color: $dark-1;
+          &:hover {
             color: $secondary;
             text-decoration: underline;
+          }
         }
       }
       p {
         margin: 1.6rem 0;
       }
+      .login-button {
+        margin-top: 1.5rem;
+      }
+
       .login-icons {
-        img {
-          margin: 0 0.4rem;
-          cursor: pointer;
+        display: flex;
+        justify-content: center;
+        .facebook-background {
+          background-color: $facebook;
           &:hover {
-            opacity: 0.8;
+            background-color: #2e4e82;
+          }
+        }
+        .gmail-background {
+          background-color: $google;
+          &:hover {
+            background-color: #772b3d;
+          }
+        }
+
+        .login-app-icon {
+          cursor: pointer;
+          padding: 0.6rem;
+          margin: 0 0.5rem;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 24px;
+
+          .login-icon {
+            background-color: $white;
+            height: 1.68rem;
           }
         }
       }
@@ -88,21 +129,41 @@
     }
   }
 }
-.arabic-container .login-content .right-part .login-input label {
-  text-align: right;
+
+.confirm {
+  margin-top: 1.8rem;
 }
-.confirm{
-margin-top: 1.8rem;
+
+.arabic-container {
+  .login-content {
+    .right-part {
+      .login-input {
+        .form-input {
+          text-align: right;
+          .input-container {
+            .input-icon {
+              right: unset;
+              left: 0;
+            }
+          }
+        }
+        .forget-password {
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 .arabic-container
   .login-content
   .right-part
   .login-input
-  .password-container
-  .see-icon {
-  right: unset;
-  left: 0;
+  .form-input
+  .input-container
+  input {
+  padding-left: 3rem;
+  padding-right: 1.5rem;
 }
 
 @include big-tablet-media-query {
@@ -111,17 +172,15 @@ margin-top: 1.8rem;
     flex-direction: row-reverse;
     justify-content: space-between;
     .left-part {
-      min-width: 45%;
-      padding-bottom: 0;
+      min-width: 47%;
       border-radius: 0 1.25rem 1.25rem 0;
-      align-items: flex-end;
       img {
         max-width: unset;
         width: 100%;
       }
     }
     .right-part {
-      padding: 2.8rem 5rem 1rem;
+      padding: 2.8rem 4rem 1rem;
     }
   }
 
