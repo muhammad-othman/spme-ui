@@ -1,0 +1,60 @@
+.course-delails {
+  padding: 3.125rem 0;
+  .course-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    background: $grey-1;
+    border-radius: 10px;
+    img {
+      min-width: 80%;
+    }
+  }
+  .course-shorthand {
+    .card-info {
+      background: $grey-1;
+      border-radius: 5px;
+      font-size: 0.875rem;
+      ul {
+        width: 22rem;
+        padding: 1.25rem 0;
+        margin: 0;
+      }
+    }
+  }
+  h2:nth-child(4) {
+    color: $secondary;
+  }
+  h2 {
+    margin-top: 1.5rem;
+  }
+  .course-subscripe-botton {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+  }
+}
+
+@include big-tablet-media-query {
+  .course-delails {
+    .container {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      display: flex;
+      .course-img {
+        min-width: 40%;
+        margin-left: 4rem;
+        margin-right: unset;
+        img {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+  .arabic-container .course-delails .container .course-img {
+    margin-right: 4rem;
+    margin-left: unset;
+  }
+}
+
