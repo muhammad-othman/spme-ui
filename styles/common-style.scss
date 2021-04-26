@@ -93,6 +93,10 @@ h4 {
   font-size: 1.125rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .common-title {
   text-align: center;
 }
@@ -100,7 +104,7 @@ h4 {
 p {
   margin: 0.625rem 0;
   line-height: 1.6rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .common-paragraph {
@@ -122,8 +126,6 @@ p {
   width: 0.9rem;
   transform: rotate(180deg);
 }
-
-
 
 .active-arrow-icon {
   -webkit-mask: url(../assets/expanded-left-arrow.svg) no-repeat bottom;
