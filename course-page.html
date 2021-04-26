@@ -13,91 +13,88 @@
 
 <body class="arabic-container">
     <header>
-        <div id="login-header" class="container flex-div header-items">
+        <div class="container flex-div header-items">
+            <a href="#" onclick="showLoninHeader()"> <img class="logo" src="assets/logo.svg"> </a>
 
-            <a href="/index.html"> <img class="logo" src="assets/logo.svg"> </a>
+            <div class="header-icons flex-div">
+                <div class="search-container">
+                    <div onClick="showSearchInput();" class="search-icon"></div>
+                </div>
 
-            <div class="login-search-container">
-                <div onClick="showLoginSearchInput(); showLoginSearchTriangle();" class="login-search-icon"></div>
-                <div id="login-search-triangle" class="login-triangle hidden"></div>
-            </div>
+                <div id="search-menu" class="search-menu hidden">
+                    <input class="search" type="text" placeholder="ابحث عن دورة">
+                    <div class="search-input-icon"></div>
+                </div>
 
-            <div id="login-search-menu" class="login-search-menu hidden">
-                <input class="login-search" type="text" placeholder="ابحث عن دورة">
-                <div class="login-search-input-icon"></div>
-            </div>
 
-            <li><a id="loginChangeLanguageButton" class="button activable-item text-button"
-                    onClick="changeLanguage()">English</a></li>
 
-            <div class="notification-container">
-                <div onClick="showNotificationsMenu()" class="notifications-icon"></div>
-                <div id="notifications-menu" class="notifications-menu hidden">
-                    <div class="triangle"></div>
-                    <ul>
-                        <li> <span>الاشعارات</span> <span>مشاهدة الكل</span> </li>
-                        <li> <span>تم تفعيل الدورة</span><span>02:23 PM</span> </li>
-                        <li> <span>الاختبار جاهز</span> <span>02:23 PM</span> </li>
-                        <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
-                        <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
-                        <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
-                        <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
-                        <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
-                        <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                <div id="login-header" class="login-menus flex-div">
+                    <a id="loginChangeLanguageButton" class="button activable-item text-button"
+                        onClick="changeLanguage()">English</a>
+
+                    <div class="notification-container">
+                        <div onClick="showNotificationsMenu()" class="notifications-icon"></div>
+                        <div id="notifications-menu" class="notifications-menu hidden">
+                            <div class="triangle"></div>
+                            <ul>
+                                <li> <span>الاشعارات</span> <span>مشاهدة الكل</span> </li>
+                                <li> <span>تم تفعيل الدورة</span><span>02:23 PM</span> </li>
+                                <li> <span>الاختبار جاهز</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                            </ul>
+                        </div>
+                        <div class="number-of-notifications">0</div>
+                    </div>
+
+                    <div class="user-container">
+                        <div onClick="showUserMenu()" class="user-content">
+                            <div class="user-img"><img src="assets/man-icon.png"></div>
+                            <span class="user-name">محمد عثمان</span>
+                            <div class="user-icon"></div>
+                        </div>
+                        <div id="user-menu-content" class="user-menu-content hidden">
+                            <div class="triangle"></div>
+                            <ul class="user-menu">
+                                <li>دوراتي</li>
+                                <li>تعديل حسابي</li>
+                                <li>تغيير كلمة المرور</li>
+                                <li id="loginVerifyCertificateButton">تحقق من شهادة</li>
+                                <li><a id="loginChangeLanguageButtonInside"
+                                        onClick="changeLanguage()">English</a></li>
+                                <li onclick="showNormalHeader()">تسجيل الخروج</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <nav id="normal-header" class="logout-menus flex-div">
+                    <input class="show-more-checkbox" id="show-more-checkbox" type="checkbox">
+                    <label for="show-more-checkbox" class="show-more-icon">
+                        <img src="assets/menu-icon.svg">
+                    </label>
+                    <ul class="menu">
+                        <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
+                                href="#">تحقق من شهادة</a></li>
+                        <li><a id="changeLanguageButton" class="button activable-item text-button"
+                                onClick="changeLanguage()">English</a></li>
+                        <li><a id="loginButton" class="button activable-item outlined-button" href="/login.html">تسجيل
+                                الدخول</a></li>
+                        <li><a id="registerButton" class="button activable-item primary-button"
+                                href="/new-account.html">حساب جديد</a></li>
                     </ul>
-                </div>
-                <div class="number-of-notifications">0</div>
+                   
+                </nav>
             </div>
 
-            <div class="user-container">
-                <div onClick="showUserMenu()" class="user-content">
-                    <div class="user-img"><img src="assets/man-icon.png"></div>
-                    <span class="user-name">محمد عثمان</span>
-                    <div class="user-icon"></div>
-                </div>
-                <div id="user-menu-content" class="user-menu-content hidden">
-                    <div class="triangle"></div>
-                    <ul class="user-menu">
-                        <li>دوراتي</li>
-                        <li>تعديل حسابي</li>
-                        <li>تغيير كلمة المرور</li>
-                        <li id="verifyCertificateButton">تحقق من شهادة</li>
-                        <li onclick="showNormalHeader()">تسجيل الخروج</li>
 
-                    </ul>
-                </div>
-            </div>
         </div>
-        <div id="normal-header" class="container flex-div">
-            <a href="#">
-                <img onclick="showLoninHeader()" class="logo" src="assets/logo.svg">
-            </a>
-            <div class="search-container">
-                <div onClick="showSearchInput(); showSearchTriangle();" class="search-icon"></div>
-                <div id="search-triangle" class="triangle hidden"></div>
-            </div>
 
-            <div id="search-menu" class="search-menu hidden">
-                <input class="search" type="text" placeholder="ابحث عن دورة">
-                <div class="search-input-icon"></div>
-            </div>
-            <nav>
-                <input class="show-more-checkbox" id="show-more-checkbox" type="checkbox">
-                <ul class="menu">
-                    <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
-                            href="#">تحقق من شهادة</a></li>
-                    <li><a id="changeLanguageButton" class="button activable-item text-button"
-                            onClick="changeLanguage()">English</a></li>
-                    <li><a id="loginButton" class="button activable-item outlined-button" href="/login.html">تسجيل
-                            الدخول</a></li>
-                    <li><a id="registerButton" class="button activable-item primary-button"
-                            href="/new-account.html">حساب جديد</a></li>
-                </ul>
-                <label for="show-more-checkbox" class="show-more-icon">
-                    <img src="assets/menu-icon.svg">
-                </label>
-            </nav>
-        </div>
+
     </header>
     <section class="common-title-content">
         <div class="container">
@@ -232,17 +229,21 @@
             body.classList.toggle("arabic-container");
             if (document.getElementById('changeLanguageButton').innerText == 'العربية') {
                 document.getElementById('verifyCertificateButton').innerText = 'تحقق من شهادة'
+                document.getElementById('loginVerifyCertificateButton').innerText = 'تحقق من شهادة'
                 document.getElementById('loginButton').innerText = 'تسجيل الدخول'
                 document.getElementById('registerButton').innerText = 'حساب جديد'
                 document.getElementById('changeLanguageButton').innerText = 'English'
                 document.getElementById('loginChangeLanguageButton').innerText = 'English'
+                document.getElementById('loginChangeLanguageButtonInside').innerText = 'English'
             }
             else {
                 document.getElementById('verifyCertificateButton').innerText = 'Verify Certificate'
+                document.getElementById('loginVerifyCertificateButton').innerText = 'Verify Certificate'
                 document.getElementById('loginButton').innerText = 'Log In'
                 document.getElementById('registerButton').innerText = 'Sign Up'
                 document.getElementById('changeLanguageButton').innerText = 'العربية'
                 document.getElementById('loginChangeLanguageButton').innerText = 'العربية'
+                document.getElementById('loginChangeLanguageButtonInside').innerText = 'العربية'
             }
         }
 
