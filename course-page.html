@@ -26,10 +26,8 @@
                     <div class="search-input-icon"></div>
                 </div>
 
-
-
                 <div id="login-header" class="login-menus flex-div">
-                    <a id="loginChangeLanguageButton" class="button activable-item text-button"
+                    <a id="loginChangeLanguageButton" class="button activable-item text-button english-button"
                         onClick="changeLanguage()">English</a>
 
                     <div class="notification-container">
@@ -64,8 +62,7 @@
                                 <li>تعديل حسابي</li>
                                 <li>تغيير كلمة المرور</li>
                                 <li id="loginVerifyCertificateButton">تحقق من شهادة</li>
-                                <li><a id="loginChangeLanguageButtonInside"
-                                        onClick="changeLanguage()">English</a></li>
+                                <li><a id="loginChangeLanguageButtonInside" onClick="changeLanguage()">English</a></li>
                                 <li onclick="showNormalHeader()">تسجيل الخروج</li>
                             </ul>
                         </div>
@@ -73,7 +70,7 @@
                 </div>
 
                 <nav id="normal-header" class="logout-menus flex-div">
-                    <input class="show-more-checkbox" id="show-more-checkbox" type="checkbox">
+                    <input class="hidden-input" id="show-more-checkbox" type="checkbox">
                     <label for="show-more-checkbox" class="show-more-icon">
                         <img src="assets/menu-icon.svg">
                     </label>
@@ -87,7 +84,7 @@
                         <li><a id="registerButton" class="button activable-item primary-button"
                                 href="/new-account.html">حساب جديد</a></li>
                     </ul>
-                   
+
                 </nav>
             </div>
 
@@ -137,7 +134,79 @@
         </div>
 
     </section>
+    <section class="course-content">
+        <div class="course-content-items container">
+            <input class="hidden-input overview-radio" name="course-radio" id="overview-radio" type="radio" checked>
+            <input class="hidden-input details-radio" name="course-radio" id="details-radio" type="radio">
+            <input class="hidden-input trainer-radio" name="course-radio" id="trainer-radio" type="radio">
+            <input class="hidden-input comments-radio" name="course-radio" id="comments-radio" type="radio">
 
+            <ul class="course-content-header">
+                <label for="overview-radio" class="radio-item">
+                    <li class="overview-li">
+                        نظرة عامة
+                    </li>
+                </label>
+                <label for="details-radio" class="radio-item">
+                    <li class="details-li">
+                        تفاصيل الدورة
+                    </li>
+                </label>
+                <label for="trainer-radio" class="radio-item">
+                    <li class="trainer-li">
+                        المدرب
+                    </li>
+                </label>
+                <label for="comments-radio" class="radio-item">
+                    <li class="comments-li">
+                        التعليقات
+                    </li>
+                </label>
+            </ul>
+            <div class="course-item-content course-overview">
+                <div class="course-benefits">
+                    <div class="radio-course-padding">
+                        <h3>مميزات الدورة</h3>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إزيادة عدد الحروف التى
+                            يولدهاالتطبيق.
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                            حيث يمكنك أن تولد مثل هذا اأو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في
+                            نفس
+                            المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديمن التى يولدها التطبيق.
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                            المساحة،
+                            لقد تم توليد هذا النص من مولد النص ، حيث يمكنك أن تولد مثل هذا النص</p>
+                    </div>
+                </div>
+                <div class="course-skills">
+                    <div class="radio-course-padding">
+                        <h3>المهارات</h3>
+                        <div class="skills-items">
+                            <ul>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                            </ul>
+                            <ul>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="top-footer-part">

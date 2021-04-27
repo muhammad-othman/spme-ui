@@ -152,7 +152,7 @@ header {
       display: none;
     }
 
-    .show-more-checkbox:checked ~ .menu {
+    .hidden-input:checked ~ .menu {
       position: static;
     }
 
@@ -166,7 +166,7 @@ header {
       box-shadow: none;
     }
 
-    .show-more-checkbox,
+    .hidden-input,
     .show-more-icon {
       display: none;
     }

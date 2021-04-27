@@ -14,8 +14,6 @@ header {
   .header-icons {
     .search-container {
       position: relative;
-      width: 1.6rem;
-      height: 1.6rem;
       margin: 1.5rem;
       .search-icon {
         cursor: pointer;
@@ -68,6 +66,9 @@ header {
     }
     .login-menus {
       display: none;
+      .english-button {
+        display: none;
+      }
       .notification-container {
         position: relative;
         margin: 0 1.5rem;
@@ -245,7 +246,7 @@ header {
       margin: auto;
     }
     .logout-menus {
-      .show-more-checkbox {
+      .hidden-input {
         display: none;
       }
       .show-more-icon {
@@ -254,7 +255,7 @@ header {
           vertical-align: middle;
         }
       }
-      .show-more-checkbox:checked ~ .menu {
+      .hidden-input:checked ~ .menu {
         display: flex;
         position: absolute;
       }
@@ -309,52 +310,58 @@ header {
 
 @include tablet-media-query {
   header {
-    .header-icons .login-menus .user-container .user-content .user-name {
-      display: block;
-    }
-
-    .header-icons .logout-menus .show-more-checkbox:checked ~ .menu {
-      position: static;
-    }
-
-    .header-icons .logout-menus .menu {
-      display: flex;
-      flex-direction: row;
-      padding: 0;
-      border-radius: 0;
-      top: 0;
-      left: 0;
-      box-shadow: none;     
-    }
-    .verify-certificate {
+    .search-container {
       display: none;
+      margin: 0;
     }
-
-    .show-more-checkbox,
-    .show-more-icon {
-      display: none;
+    .header-icons {
+      flex: 1;
+      .login-menus .user-container .user-content .user-name {
+        display: block;
+      }
+      .logout-menus .hidden-input:checked ~ .menu {
+        position: static;
+      }
+      .search-menu {
+        flex: 1;
+        max-width: 85%;
+        margin: auto;
+        display: block;
+        position: relative;
+        top: 0;
+        box-shadow: unset;
+      }
     }
   }
 }
 
 @include big-tablet-media-query {
   header {
-    .search-container {
-      display: none;
-      margin: 0;
+    .header-icons{
+      .login-menus .english-button {
+        display: block;
+      }
+      .logout-menus{
+        .menu .verify-certificate {
+          display: block;
+        }
+        .menu {
+          display: flex;
+          flex-direction: row;
+          padding: 0;
+          border-radius: 0;
+          top: 0;
+          left: 0;
+          box-shadow: none;
+        }
+      }
     }
-
-    .header-icons {
-      .search-menu {
-        display: block;
-        position: relative;
-        top: 0;
-        box-shadow: unset;
-      }
-      .logout-menus .menu .verify-certificate {
-        display: block;
-      }
+    .verify-certificate {
+      display: none;
+    }
+    .hidden-input,
+    .show-more-icon {
+      display: none;
     }
   }
 }
-
