@@ -9,23 +9,20 @@ header {
   font-weight: bold;
   .logo {
     height: 3.25rem;
+    margin-right: 1rem;
   }
 
   .header-icons {
-    .search-container {
-      position: relative;
-      margin: 1.5rem;
-      .search-icon {
-        cursor: pointer;
-        width: 1.6rem;
-        height: 1.6rem;
-        -webkit-mask: url(../assets/search.svg) center / contain no-repeat;
-        -ms-mask: url(../assets/search.svg) center / contain no-repeat;
-        mask: url(../assets/search.svg) center / contain no-repeat;
-        background-color: $grey-5;
-        &:hover {
-          background-color: $primary;
-        }
+    .search-icon {
+      cursor: pointer;
+      width: 1.6rem;
+      height: 1.6rem;
+      -webkit-mask: url(../assets/search.svg) center / contain no-repeat;
+      -ms-mask: url(../assets/search.svg) center / contain no-repeat;
+      mask: url(../assets/search.svg) center / contain no-repeat;
+      background-color: $grey-5;
+      &:hover {
+        background-color: $primary;
       }
     }
     .search-menu {
@@ -64,11 +61,12 @@ header {
         }
       }
     }
+    .english-button {
+      display: none;
+    }
     .login-menus {
       display: none;
-      .english-button {
-        display: none;
-      }
+
       .notification-container {
         position: relative;
         margin: 0 1.5rem;
@@ -101,11 +99,14 @@ header {
 
         .notifications-menu {
           position: absolute;
-          width: 17rem;
+          width: 18.5rem;
           font-size: 0.75rem;
           box-shadow: 0 2px 5px 0 #00000014;
           top: 2.9rem;
-          right: -7.8rem;
+          left: -10rem;
+          .triangle {
+            margin-left: 10.25rem;
+          }
           ul {
             background: $white;
             border-radius: 5px;
@@ -165,7 +166,7 @@ header {
           &:hover {
             box-shadow: 0 2px 5px 0 #00000014;
           }
-          &:hover .user-icon {
+          &:hover .user-arrow-icon {
             background-color: $primary;
           }
           .user-img {
@@ -187,7 +188,7 @@ header {
             margin: 0 0.5rem;
           }
 
-          .user-icon {
+          .user-arrow-icon {
             cursor: pointer;
             width: 0.6rem;
             height: 0.6rem;
@@ -243,13 +244,13 @@ header {
       border-left: 0.5rem solid transparent;
       border-right: 0.5rem solid transparent;
       border-bottom: 0.7rem solid $white;
-      margin: auto;
     }
     .logout-menus {
       .hidden-input {
         display: none;
       }
       .show-more-icon {
+        margin-left: 1.5rem;
         cursor: pointer;
         img {
           vertical-align: middle;
@@ -285,6 +286,10 @@ header {
 }
 
 .arabic-container {
+  .logo {
+    margin-right: unset;
+    margin-left: 1rem;
+  }
   .header-icons {
     .search-menu {
       .search {
@@ -296,35 +301,45 @@ header {
         right: unset;
       }
     }
+    .login-menus {
+      .notifications-menu {
+        right: -10rem;
+        .triangle {
+          margin-right: 10.25rem;
+        }
+      }
+    }
     .login-menus .user-container .user-menu-content {
       right: unset;
       left: 0;
     }
 
-    .logout-menus .menu {
-      right: unset;
-      left: 0;
+    .logout-menus {
+      
+      .show-more-icon {
+        margin-right: 1.5rem;
+        margin-left: unset;
+      }
+      .menu {
+        right: unset;
+        left: 0;
+      }
     }
   }
 }
 
 @include tablet-media-query {
   header {
-    .search-container {
+    .search-icon {
       display: none;
-      margin: 0;
     }
     .header-icons {
       flex: 1;
       .login-menus .user-container .user-content .user-name {
         display: block;
       }
-      .logout-menus .hidden-input:checked ~ .menu {
-        position: static;
-      }
       .search-menu {
         flex: 1;
-        max-width: 85%;
         margin: auto;
         display: block;
         position: relative;
@@ -337,15 +352,16 @@ header {
 
 @include big-tablet-media-query {
   header {
-    .header-icons{
+    .header-icons {
       .login-menus .english-button {
         display: block;
       }
-      .logout-menus{
+      .logout-menus {
         .menu .verify-certificate {
           display: block;
         }
         .menu {
+          position: unset !important;
           display: flex;
           flex-direction: row;
           padding: 0;

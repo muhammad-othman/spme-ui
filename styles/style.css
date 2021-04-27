@@ -181,12 +181,9 @@ header {
 }
 header .logo {
   height: 3.25rem;
+  margin-right: 1rem;
 }
-header .header-icons .search-container {
-  position: relative;
-  margin: 1.5rem;
-}
-header .header-icons .search-container .search-icon {
+header .header-icons .search-icon {
   cursor: pointer;
   width: 1.6rem;
   height: 1.6rem;
@@ -195,7 +192,7 @@ header .header-icons .search-container .search-icon {
   mask: url(../assets/search.svg) center/contain no-repeat;
   background-color: #565656;
 }
-header .header-icons .search-container .search-icon:hover {
+header .header-icons .search-icon:hover {
   background-color: #115faf;
 }
 header .header-icons .search-menu {
@@ -234,10 +231,10 @@ header .header-icons .search-menu .search-input-icon {
 header .header-icons .search-menu .search-input-icon:hover {
   background-color: #115faf;
 }
-header .header-icons .login-menus {
+header .header-icons .english-button {
   display: none;
 }
-header .header-icons .login-menus .english-button {
+header .header-icons .login-menus {
   display: none;
 }
 header .header-icons .login-menus .notification-container {
@@ -270,11 +267,14 @@ header .header-icons .login-menus .notification-container .number-of-notificatio
 }
 header .header-icons .login-menus .notification-container .notifications-menu {
   position: absolute;
-  width: 17rem;
+  width: 18.5rem;
   font-size: 0.75rem;
   box-shadow: 0 2px 5px 0 #00000014;
   top: 2.9rem;
-  right: -7.8rem;
+  left: -10rem;
+}
+header .header-icons .login-menus .notification-container .notifications-menu .triangle {
+  margin-left: 10.25rem;
 }
 header .header-icons .login-menus .notification-container .notifications-menu ul {
   background: #ffffff;
@@ -330,7 +330,7 @@ header .header-icons .login-menus .user-container .user-content {
 header .header-icons .login-menus .user-container .user-content:hover {
   box-shadow: 0 2px 5px 0 #00000014;
 }
-header .header-icons .login-menus .user-container .user-content:hover .user-icon {
+header .header-icons .login-menus .user-container .user-content:hover .user-arrow-icon {
   background-color: #115faf;
 }
 header .header-icons .login-menus .user-container .user-content .user-img {
@@ -350,7 +350,7 @@ header .header-icons .login-menus .user-container .user-content .user-name {
   font-weight: unset;
   margin: 0 0.5rem;
 }
-header .header-icons .login-menus .user-container .user-content .user-icon {
+header .header-icons .login-menus .user-container .user-content .user-arrow-icon {
   cursor: pointer;
   width: 0.6rem;
   height: 0.6rem;
@@ -360,7 +360,7 @@ header .header-icons .login-menus .user-container .user-content .user-icon {
   mask: url(../assets/icon-down.svg) center/contain no-repeat;
   background-color: #565656;
 }
-header .header-icons .login-menus .user-container .user-content .user-icon:hover {
+header .header-icons .login-menus .user-container .user-content .user-arrow-icon:hover {
   background-color: #115faf;
 }
 header .header-icons .login-menus .user-container .user-menu-content {
@@ -400,12 +400,12 @@ header .header-icons .triangle {
   border-left: 0.5rem solid transparent;
   border-right: 0.5rem solid transparent;
   border-bottom: 0.7rem solid #ffffff;
-  margin: auto;
 }
 header .header-icons .logout-menus .hidden-input {
   display: none;
 }
 header .header-icons .logout-menus .show-more-icon {
+  margin-left: 1.5rem;
   cursor: pointer;
 }
 header .header-icons .logout-menus .show-more-icon img {
@@ -435,6 +435,10 @@ header .header-icons .logout-menus .menu li {
   margin: 0.625rem;
 }
 
+.arabic-container .logo {
+  margin-right: unset;
+  margin-left: 1rem;
+}
 .arabic-container .header-icons .search-menu .search {
   padding-left: 2.5rem;
   padding-right: 0.625rem;
@@ -443,9 +447,19 @@ header .header-icons .logout-menus .menu li {
   left: 0.6rem;
   right: unset;
 }
+.arabic-container .header-icons .login-menus .notifications-menu {
+  right: -10rem;
+}
+.arabic-container .header-icons .login-menus .notifications-menu .triangle {
+  margin-right: 10.25rem;
+}
 .arabic-container .header-icons .login-menus .user-container .user-menu-content {
   right: unset;
   left: 0;
+}
+.arabic-container .header-icons .logout-menus .show-more-icon {
+  margin-right: 1.5rem;
+  margin-left: unset;
 }
 .arabic-container .header-icons .logout-menus .menu {
   right: unset;
@@ -453,9 +467,8 @@ header .header-icons .logout-menus .menu li {
 }
 
 @media (min-width: 40em) {
-  header .search-container {
+  header .search-icon {
     display: none;
-    margin: 0;
   }
   header .header-icons {
     flex: 1;
@@ -463,12 +476,8 @@ header .header-icons .logout-menus .menu li {
   header .header-icons .login-menus .user-container .user-content .user-name {
     display: block;
   }
-  header .header-icons .logout-menus .hidden-input:checked ~ .menu {
-    position: static;
-  }
   header .header-icons .search-menu {
     flex: 1;
-    max-width: 85%;
     margin: auto;
     display: block;
     position: relative;
@@ -484,6 +493,7 @@ header .header-icons .logout-menus .menu li {
     display: block;
   }
   header .header-icons .logout-menus .menu {
+    position: unset !important;
     display: flex;
     flex-direction: row;
     padding: 0;
@@ -854,17 +864,17 @@ header .show-more-icon {
 .top-footer-part .footer-content .subscribe h4 {
   margin-top: 1.6rem;
 }
-.top-footer-part .footer-content .subscribe .subscribe-search-container {
+.top-footer-part .footer-content .subscribe .subscribe-container {
   margin: 0.7rem 0;
   position: relative;
 }
-.top-footer-part .footer-content .subscribe .subscribe-search-container .search {
+.top-footer-part .footer-content .subscribe .subscribe-container .search {
   width: 100%;
   height: 3rem;
   padding: 0.625rem 5.8rem 0.625rem 0.625rem;
   font-size: 1rem;
 }
-.top-footer-part .footer-content .subscribe .subscribe-search-container .subscribe-search-icon {
+.top-footer-part .footer-content .subscribe .subscribe-container .subscribe-search-icon {
   position: absolute;
   right: 0;
   height: 3rem;
@@ -873,7 +883,7 @@ header .show-more-icon {
   background-color: #115faf;
   border-radius: 0px 5px 5px 0px;
 }
-.top-footer-part .footer-content .subscribe .subscribe-search-container .subscribe-search-icon:hover {
+.top-footer-part .footer-content .subscribe .subscribe-container .subscribe-search-icon:hover {
   background: #ff7c00;
 }
 .top-footer-part .footer-content .quick-links {
@@ -942,10 +952,10 @@ header .show-more-icon {
   background-color: #ff7c00;
 }
 
-.arabic-container .top-footer-part .footer-content .subscribe .subscribe-search-container .search {
+.arabic-container .top-footer-part .footer-content .subscribe .subscribe-container .search {
   padding: 0.625rem 0.625rem 0.625rem 5.8rem;
 }
-.arabic-container .top-footer-part .footer-content .subscribe .subscribe-search-container .subscribe-search-icon {
+.arabic-container .top-footer-part .footer-content .subscribe .subscribe-container .subscribe-search-icon {
   left: 0;
   right: unset;
   border-radius: 5px 0px 0px 5px;
@@ -1033,6 +1043,16 @@ header .show-more-icon {
 .facebook2 {
   -webkit-mask: url(../assets/blue-facebook.svg) no-repeat center;
   mask: url(../assets/blue-facebook.svg) no-repeat center;
+}
+
+.video-icon {
+  -webkit-mask: url(../assets/video.svg) center center/contain no-repeat;
+  mask: url(../assets/video.svg) center center/contain no-repeat;
+}
+
+.lock-icon {
+  -webkit-mask: url(../assets/lock.svg) center center/contain no-repeat;
+  mask: url(../assets/lock.svg) center center/contain no-repeat;
 }
 
 .common-title-content {
@@ -1235,7 +1255,7 @@ header .show-more-icon {
   font-size: 0.875rem;
 }
 .course-delails .course-shorthand .card-info ul {
-  width: 22rem;
+  max-width: 22rem;
   padding: 1.25rem 0;
   margin: 0;
 }
@@ -1303,6 +1323,10 @@ header .show-more-icon {
 .course-content .course-content-items .course-overview {
   display: none;
 }
+.course-content .course-content-items .course-overview h3 {
+  border-left: 5px solid #115faf;
+  padding-left: 1rem;
+}
 .course-content .course-content-items .course-overview .radio-course-padding {
   padding: 0.5rem 2rem;
 }
@@ -1311,7 +1335,7 @@ header .show-more-icon {
   padding: 0.5rem 0;
 }
 .course-content .course-content-items .course-overview .course-skills h3 {
-  padding: 1rem 0;
+  margin: 1rem 0;
 }
 .course-content .course-content-items .course-overview .course-skills .skills-items {
   display: flex;
@@ -1325,6 +1349,57 @@ header .show-more-icon {
   color: #05111e90;
   margin-bottom: 1rem;
 }
+.course-content .course-content-items .course-details {
+  padding: 1.5rem;
+  display: none;
+}
+.course-content .course-content-items .course-details h3 {
+  background: #f4f5f7;
+  padding: 0.7rem;
+}
+.course-content .course-content-items .course-details .course-video li {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 1rem;
+  border-bottom: 2px solid #E4E8EF;
+}
+.course-content .course-content-items .course-details .course-video li .video-name {
+  display: flex;
+}
+.course-content .course-content-items .course-details .course-video li .video-name .video-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #115faf;
+}
+.course-content .course-content-items .course-details .course-video li .video-name span {
+  margin: 0 0.6rem;
+  font-weight: bolder;
+}
+.course-content .course-content-items .course-details .course-video li .video-details {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+.course-content .course-content-items .course-details .course-video li .video-details .video-questions {
+  background: #115faf;
+  color: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+}
+.course-content .course-content-items .course-details .course-video li .video-details .video-time {
+  color: #929292;
+  margin-left: 0.8rem;
+  margin-right: 2.5rem;
+}
+.course-content .course-content-items .course-details .course-video li .video-details .lock-icon {
+  width: 1rem;
+  height: 1rem;
+  background: #115faf;
+}
+.course-content .course-content-items .course-details .course-video li:last-child {
+  border-bottom: unset;
+  padding-bottom: 0;
+}
 .course-content .course-content-items .overview-radio:checked ~ .course-overview {
   display: block;
 }
@@ -1336,6 +1411,19 @@ header .show-more-icon {
 }
 .course-content .course-content-items .comments-radio:checked ~ .course-comments {
   display: block;
+}
+
+.arabic-container .course-overview h3 {
+  border-left: 0;
+  border-right: 5px solid #115faf;
+  padding-right: 1rem;
+}
+.arabic-container .course-content .course-content-items .course-overview h3 {
+  border-left: 0;
+}
+.arabic-container .course-content .course-content-items .course-details .course-video li .video-details .video-time {
+  margin-right: 0.8rem;
+  margin-left: 2.5rem;
 }
 
 @media (min-width: 40em) {

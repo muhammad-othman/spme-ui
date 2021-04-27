@@ -13,7 +13,7 @@ header {
     .logo {
       height: 3.25rem;
     }
-    .login-search-container {
+    .login-search-icon-container {
       position: relative;
       width: 1.6rem;
       height: 1.6rem;
@@ -138,7 +138,7 @@ header {
     
 
     
-    .search-container {
+    .search-icon-container {
       display: block;
       margin: 0;
       left: 0;
@@ -182,7 +182,7 @@ header {
 @include big-tablet-media-query {
   header {
     .header-items {
-      .login-search-container {
+      .login-search-icon-container {
         display: none;
       }
       .login-search-menu {

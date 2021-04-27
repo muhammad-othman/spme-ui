@@ -17,9 +17,7 @@
             <a href="#" onclick="showLoninHeader()"> <img class="logo" src="assets/logo.svg"> </a>
 
             <div class="header-icons flex-div">
-                <div class="search-container">
-                    <div onClick="showSearchInput();" class="search-icon"></div>
-                </div>
+                <div onClick="showSearchInput();" class="search-icon"></div>
 
                 <div id="search-menu" class="search-menu hidden">
                     <input class="search" type="text" placeholder="ابحث عن دورة">
@@ -55,7 +53,7 @@
                         <div onClick="showUserMenu()" class="user-content">
                             <div class="user-img"><img src="assets/man-icon.png"></div>
                             <span class="user-name">محمد عثمان</span>
-                            <div class="user-icon"></div>
+                            <div class="user-arrow-icon"></div>
                         </div>
                         <div id="user-menu-content" class="user-menu-content hidden">
                             <div class="triangle"></div>
@@ -64,8 +62,7 @@
                                 <li>تعديل حسابي</li>
                                 <li>تغيير كلمة المرور</li>
                                 <li id="loginVerifyCertificateButton">تحقق من شهادة</li>
-                                <li><a id="loginChangeLanguageButtonInside"
-                                        onClick="changeLanguage()">English</a></li>
+                                <li><a id="loginChangeLanguageButtonInside" onClick="changeLanguage()">English</a></li>
                                 <li onclick="showNormalHeader()">تسجيل الخروج</li>
                             </ul>
                         </div>
@@ -87,7 +84,7 @@
                         <li><a id="registerButton" class="button activable-item primary-button"
                                 href="/new-account.html">حساب جديد</a></li>
                     </ul>
-                   
+
                 </nav>
             </div>
 
@@ -567,7 +564,7 @@
                         هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
                     </p>
                     <h4>اشترك لتصلك الدورات الجديدة</h4>
-                    <div class="subscribe-search-container">
+                    <div class="subscribe-container">
                         <div class="subscribe-search-icon activable-item">اشترك</div>
                         <input class="search" type="email" placeholder="برجاء ادخال البريد الألكتروني">
                     </div>
