@@ -1,5 +1,8 @@
 .course-delails {
   padding: 3.125rem 0;
+  p {
+    color: #05111e90;
+  }
   .course-img {
     display: flex;
     align-items: center;
@@ -36,6 +39,109 @@
   }
 }
 
+.course-content {
+  background: $grey-1;
+  padding: 3.125rem 0;
+  p {
+    color: #05111e90;
+  }
+
+  .overview-radio:checked ~ .course-content-header .overview-li {
+    background: $primary;
+    color: $white;
+  }
+  .details-radio:checked ~ .course-content-header .details-li {
+    background: $primary;
+    color: $white;
+  }
+  .trainer-radio:checked ~ .course-content-header .trainer-li {
+    background: $primary;
+    color: $white;
+  }
+  .comments-radio:checked ~ .course-content-header .comments-li {
+    background: $primary;
+    color: $white;
+  }
+
+  .course-content-items {
+    background: $white;
+    border-radius: 10px;
+    border: 2px solid $grey-8;
+    .course-content-header {
+      border-bottom: 2px solid $grey-8;
+      padding: 0.5rem 1rem;
+      &:checked ~ li {
+        background: $primary;
+        color: $white;
+      }
+      .radio-item {
+        display: inline-block;
+      }
+
+      li {
+        cursor: pointer;
+        font-size: 0.875rem;
+        margin: 0.5rem;
+        text-align: center;
+        padding: 0.5625rem 0;
+        width: 7.5rem;
+        background: $grey-1;
+        border-radius: 5px;
+      }
+    }
+    .course-overview {
+      display: none;
+      .radio-course-padding {
+        padding: 0.5rem 2rem;
+      }
+      .course-benefits {
+        border-bottom: 2px solid $grey-8;
+        padding: 0.5rem 0;        
+      }
+      .course-skills {
+        h3 {
+          padding: 1rem 0;
+        }
+        .skills-items {
+          display: flex;
+          justify-content: space-between;
+          width: 80%;
+          ul {
+            margin-top: 0.5rem;
+            li {
+              color: #05111e90;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .overview-radio:checked ~ .course-overview {
+      display: block;
+    }
+    .details-radio:checked ~ .course-details {
+      display: block;
+    }
+    .trainer-radio:checked ~ .course-trainer {
+      display: block;
+    }
+    .comments-radio:checked ~ .course-comments {
+      display: block;
+    }
+  }
+}
+
+@include tablet-media-query {
+  .course-content
+    .course-content-items
+    .course-overview
+    .course-skills
+    .skills-items {
+    width: 70%;
+  }
+}
+
 @include big-tablet-media-query {
   .course-delails {
     .container {
@@ -52,9 +158,16 @@
       }
     }
   }
+  .course-content
+    .course-content-items
+    .course-overview
+    .course-skills
+    .skills-items {
+    width: 60%;
+  }
+
   .arabic-container .course-delails .container .course-img {
     margin-right: 4rem;
     margin-left: unset;
   }
 }
-
