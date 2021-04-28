@@ -1,0 +1,99 @@
+.contact-details {
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 40rem;
+    margin: 2.5rem auto;
+    li {
+      text-align: center;
+      .icon-background {
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+        background: $secondary;
+        padding: 0.6rem;
+        margin: auto;
+        .contact-icon {
+          width: 1rem;
+          height: 1rem;
+          background: $white;
+          margin: auto;
+        }
+      }
+      h4 {
+        margin: 1.3rem 0 0.8rem;
+      }
+      span {
+        color: $primary;
+        font-size: 0.8rem;
+      }
+      .border-line {
+        width: 0.1rem;
+        height: 2.3rem;
+        background-color: $grey-3;
+      }
+    }
+  }
+  .map-img-container {
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+.contact-inputs-content {
+  background-image: url(/assets/contact-background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2.5rem 1rem;
+  .contact-inputs {
+    .personal-data {
+      margin-top: 3rem;
+      .input-name {
+        margin-right: 2rem;
+      }
+    }
+    .input-messege {
+      height: 10rem;
+      padding-bottom: 8rem;
+    }
+    input {
+      display: block;
+      margin-top: 1rem;
+      width: 100%;
+      background: $white;
+      border: 2px solid $grey-3;
+      padding: 0.8rem;
+    }
+  }
+  .contact-send-button {
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 2.5rem;
+    margin: 1.25rem auto 0;
+    .arrow-icon {
+      margin: 0.125rem 0.5rem 0;
+      background-color: $white;
+      height: 1rem;
+    }
+  }
+}
+
+.arabic-container {
+  .contact-inputs-content .contact-inputs .personal-data .input-name {
+    margin-right: unset;
+    margin-left: 2rem;
+  }
+}
+
+@include tablet-media-query {
+  .contact-inputs-content .contact-inputs .personal-data {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .contact-inputs-content .container{
+    max-width: 60%;
+  }
+}

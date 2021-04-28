@@ -1,3 +1,22 @@
+.warning-messege-content{
+  display: none;
+  .warning-messege{
+    img{
+
+    }
+    p{
+
+    }
+    .warning-messege-buttons{
+      .warning-button{
+
+      }
+    }
+  }
+}
+
+
+
 .course-delails {
   padding: 3.125rem 0;
   p {
@@ -94,7 +113,6 @@
       }
     }
     .course-overview {
-      display: none;
       h3 {
         border-left: 5px solid $primary;
         padding-left: 1rem;
@@ -126,7 +144,6 @@
     }
     .course-details {
       padding: 1.5rem;
-      display: none;
       h3 {
         background: $grey-1;
         padding: 0.7rem;
@@ -193,7 +210,6 @@
       }
     }
     .course-trainer {
-      display: none;
       .course-trainer-items {
         text-align: center;
         padding: 1.5rem;
@@ -226,7 +242,6 @@
       }
     }
     .course-comments {
-      display: none;
       .comment-stars-content {
         justify-content: center;
         display: flex;

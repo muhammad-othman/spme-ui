@@ -47,8 +47,15 @@ input {
   color: $white;
 }
 
+.cancel-button{
+  background-color: $danger;
+  border: 2px solid $danger;
+  color: $white;
+}
+
 .outlined-button:hover,
 .primary-button:hover,
+.cancel-button:hover,
 .selected-button {
   background: $secondary;
   border: 2px solid $secondary;
@@ -71,6 +78,7 @@ input {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 li {
@@ -99,6 +107,9 @@ h4 {
 
 .common-title {
   text-align: center;
+  p{
+    opacity: .7;
+  }
 }
 
 p {
@@ -111,7 +122,7 @@ p {
   opacity: 50%;
 }
 
-.flex-div {
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,7 +177,4 @@ p {
   .arrow-icon {
     background: $secondary;
   }
-}
-.hidden-input {
-  display: none;
 }

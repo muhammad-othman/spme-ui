@@ -13,20 +13,20 @@
 
 <body class="arabic-container">
     <header>
-        <div class="container flex-div header-items">
+        <div class="container flex header-items">
             <a href="#" onclick="showLoninHeader()"> <img class="logo" src="assets/logo.svg"> </a>
 
-            <div class="header-icons flex-div">
+            <div class="header-icons flex">
                 <div onClick="showSearchInput();" class="search-icon"></div>
 
                 <div id="search-menu" class="search-menu hidden">
-                    <input class="search" type="text" placeholder="ابحث عن دورة">
+                    <input class="search" type="search"  placeholder="ابحث عن دورة">
                     <div class="search-input-icon"></div>
                 </div>
 
 
 
-                <div id="login-header" class="login-menus flex-div">
+                <div id="login-header" class="login-menus flex">
                     <a id="loginChangeLanguageButton" class="button activable-item text-button"
                         onClick="changeLanguage()">English</a>
 
@@ -60,7 +60,7 @@
                             <ul class="user-menu">
                                 <li>دوراتي</li>
                                 <li>تعديل حسابي</li>
-                                <li>تغيير كلمة المرور</li>
+                                <li> <a href="change-password.html">تغيير كلمة المرور </a></li>
                                 <li id="loginVerifyCertificateButton">تحقق من شهادة</li>
                                 <li><a id="loginChangeLanguageButtonInside" onClick="changeLanguage()">English</a></li>
                                 <li onclick="showNormalHeader()">تسجيل الخروج</li>
@@ -69,8 +69,8 @@
                     </div>
                 </div>
 
-                <nav id="normal-header" class="logout-menus flex-div">
-                    <input class="hidden-input" id="show-more-checkbox" type="checkbox">
+                <nav id="normal-header" class="logout-menus flex">
+                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
                     <label for="show-more-checkbox" class="show-more-icon">
                         <img src="assets/menu-icon.svg">
                     </label>
@@ -170,14 +170,14 @@
         <div class="top-footer-part">
             <div class="footer-content container">
                 <div class="subscribe">
-                    <img src="assets/logo-white.png">
+                    <a href="/index.html"><img src="assets/logo-white.png"></a>
                     <p class="common-paragraph">
                         هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
                     </p>
                     <h4>اشترك لتصلك الدورات الجديدة</h4>
                     <div class="subscribe-container">
                         <div class="subscribe-search-icon activable-item">اشترك</div>
-                        <input class="search" type="email" placeholder="برجاء ادخال البريد الألكتروني">
+                        <input class="subscribe" type="email" placeholder="برجاء ادخال البريد الألكتروني">
                     </div>
                 </div>
                 <div class="quick-links">
@@ -197,7 +197,7 @@
                         </div>
                         <div class="quick-link activable-item">
                             <div class="double-arrow icon"></div>
-                            <a>تواصل معنا</a>
+                            <a href="/contact-us.html">تواصل معنا</a>
                         </div>
                     </div>
                     <div class="quick-links-item">

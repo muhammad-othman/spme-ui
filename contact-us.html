@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SPME - Special Progam for Material Education</title>
+    <title>SPME - Special Progam for Material Education</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
@@ -23,8 +23,6 @@
                     <input class="search" type="search"  placeholder="ابحث عن دورة">
                     <div class="search-input-icon"></div>
                 </div>
-
-
 
                 <div id="login-header" class="login-menus flex">
                     <a id="loginChangeLanguageButton" class="button activable-item text-button"
@@ -95,40 +93,61 @@
     </header>
     <section class="common-title-content">
         <div class="container">
-            <h2>استعادة كلمة المرور الجديدة</h2>
-            <p>الرئيسية /إستعادة كلمة المرور</p>
+            <h2>تواصل معنا</h2>
+            <p>الرئيسية / تواصل معنا</p>
         </div>
     </section>
-    <section class="login-content container">
-        <div class="left-part"><img src="assets/login-img.svg"></div>
-        <div class="right-part">
-            <div class="login-title">
-                <h3>استعادة كلمة المرور الجديدة</h3>
-                <p class="common-paragraph">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تمتوليد هذا النص من
-                    مولد النص العربى</p>
-            </div>
-            <div class="login-input">
-                <div class="form-input input-error">
-                    <label class="input-label" for="password-input"> كلمة المرور الجديده</label>
-                    <div class="input-container">
-                        <input id="password-input" type="password" placeholder="برجاء ادخال كلمة المرور">
-                        <div class="input-icon"></div>
-                    </div>
-                    <span class="input-error-message"></span>
+    <section class="contact-details container">
+        <ul class="contact-info">
+            <li>
+                <div class="icon-background">
+                    <div class="contact-icon map"></div>
                 </div>
-                <div class="form-input input-error">
-                    <label class="input-label" for="password-input">تأكيد كلمة المرور الجديده</label>
-                    <div class="input-container">
-                        <input id="password-input" type="password" placeholder="برجاء تأكيد كلمة المرور">
-                        <div class="input-icon"></div>
-                    </div>
-                    <span class="input-error-message"></span>
+                <h4>العنوان</h4>
+                <span>المعادي- القاهرة</span>
+            </li>
+            <li>
+                <div class="border-line"></div>
+            </li>
+            <li>
+                <div class="icon-background">
+                    <div class="contact-icon phone"></div>
                 </div>
-                <a class="button activable-item primary-button login-button" href="#">تأكيد</a>
+                <h4>رقم الجوال</h4>
+                <span>٠١٢٣٤٥٦٧٨٩٠</span>
+            </li>
+            <li>
+                <div class="border-line"></div>
+            </li>
+            <li>
+                <div class="icon-background">
+                    <div class="contact-icon email"></div>
+                </div>
+                <h4>البريد الالكتروني</h4>
+                <span>info@name.com</span>
+            </li>
+        </ul>
+        <div class="map-img-container"><img src="/assets/map-img.png"></div>
+    </section>
+    <section class="contact-inputs-content">
+        <div class="container">
+            <div class="common-title">
+                <h2>تواصل معنا</h2>
+                <p>هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه</p>
             </div>
+            <div class="contact-inputs">
+                <div class="personal-data">
+                    <input class="input-name" type="text" placeholder="الاسم">
+                    <input class="input-number" type="number" placeholder="رقم الجوال">
+                </div>
+                <input class="input-email" type="email" placeholder="البريد الألكتروني">
+                <input class="input-messege" type="text" placeholder="الرسالة">
+            </div>
+            <button class="primary-button button activable-item contact-send-button">ارسال<div class="arrow-icon"></div></button>
         </div>
+    </section>
 
-    </section>
+
     <footer>
         <div class="top-footer-part">
             <div class="footer-content container">
@@ -138,7 +157,7 @@
                         هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
                     </p>
                     <h4>اشترك لتصلك الدورات الجديدة</h4>
-                    <div class="subscribe-container">
+                    <div class="subscribe-search-icon-container">
                         <div class="subscribe-search-icon activable-item">اشترك</div>
                         <input class="subscribe" type="email" placeholder="برجاء ادخال البريد الألكتروني">
                     </div>
@@ -249,7 +268,6 @@
         }
 
 
-
         function showLoginSearchInput() {
             var loginSearchMenu = document.getElementById('login-search-menu');
 
@@ -257,12 +275,6 @@
 
         }
 
-
-        function showLoginSearchTriangle() {
-            var loginSearchTriangle = document.getElementById('login-search-triangle');
-
-            loginSearchTriangle.classList.toggle('hidden');
-        }
 
         function showSearchInput() {
             var searchMenu = document.getElementById('search-menu');
