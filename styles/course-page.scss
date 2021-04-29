@@ -1,21 +1,35 @@
-.warning-messege-content{
+.warning-messege-content {
+  background: rgba(0, 0, 0, 0.500);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
   display: none;
-  .warning-messege{
-    img{
+  align-items: center;
+  justify-content: center;
+  .warning-messege {
+    text-align: center;
+    max-width: 73.125rem;
+    background: $white;
+    padding: 4rem;
+    border-radius: 25px;
+    margin: 3rem;
 
+    img {
+      width: 8rem;
     }
-    p{
-
+    p {
+      font-size: 1.5rem;
+      margin: 1.5rem;
     }
-    .warning-messege-buttons{
-      .warning-button{
-
+    .warning-messege-buttons {
+      .warning-button {
+        width: 9rem;
+        margin: 1rem .5rem;
       }
     }
   }
 }
-
-
 
 .course-delails {
   padding: 3.125rem 0;

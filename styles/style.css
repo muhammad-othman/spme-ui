@@ -1243,8 +1243,35 @@ header .show-more-icon {
   }
 }
 .warning-messege-content {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
   display: none;
+  align-items: center;
+  justify-content: center;
 }
+.warning-messege-content .warning-messege {
+  text-align: center;
+  max-width: 73.125rem;
+  background: #ffffff;
+  padding: 4rem;
+  border-radius: 25px;
+  margin: 3rem;
+}
+.warning-messege-content .warning-messege img {
+  width: 8rem;
+}
+.warning-messege-content .warning-messege p {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
+.warning-messege-content .warning-messege .warning-messege-buttons .warning-button {
+  width: 9rem;
+  margin: 1rem 0.5rem;
+}
+
 .course-delails {
   padding: 3.125rem 0;
 }

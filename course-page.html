@@ -12,13 +12,13 @@
 </head>
 
 <body class="arabic-container">
-    <div class="warning-messege-content">
+    <div id="warning-messege-content" class="warning-messege-content">
         <div class="warning-messege">
             <img src="/assets/cloud-done.svg">
             <p>من فضلك قم باستكمال معلومات الملف الشخصي الخاص بك لتتمكن من بدا الدورة</p>
             <div class="warning-messege-buttons">
                 <button class="primary-button button warning-button">الملف الشخصي</button>
-                <button class="cancel-button button warning-button">إالغاء</button>
+                <button onclick="hideWarningMessege()" class="cancel-button button warning-button">إالغاء</button>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
                 <div onClick="showSearchInput();" class="search-icon"></div>
 
                 <div id="search-menu" class="search-menu hidden">
-                    <input class="search" type="search"  placeholder="ابحث عن دورة">
+                    <input class="search" type="search" placeholder="ابحث عن دورة">
                     <div class="search-input-icon"></div>
                 </div>
 
@@ -136,7 +136,8 @@
                     حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من</p>
                 <h2 class="cost-head">300 جنية</h2>
-                <button class="button activable-item primary-button course-subscripe-botton" href="#">اشترك
+                <button onclick="showWarningMessege()"
+                    class="button activable-item primary-button course-subscripe-botton" href="#">اشترك
                     الان</button>
             </div>
         </div>
@@ -144,7 +145,8 @@
     </section>
     <section class="course-content">
         <div class="course-content-items container">
-            <input class="hidden-input hidden overview-radio" name="course-radio" id="overview-radio" type="radio" checked>
+            <input class="hidden-input hidden overview-radio" name="course-radio" id="overview-radio" type="radio"
+                checked>
             <input class="hidden-input hidden details-radio" name="course-radio" id="details-radio" type="radio">
             <input class="hidden-input hidden trainer-radio" name="course-radio" id="trainer-radio" type="radio">
             <input class="hidden-input hidden comments-radio" name="course-radio" id="comments-radio" type="radio">
@@ -640,6 +642,14 @@
             }
         }
 
+        function showWarningMessege() {
+            document.getElementById('warning-messege-content').style.display = "flex";
+        }
+
+        function hideWarningMessege() {
+            document.getElementById('warning-messege-content').style.display = "none";
+        }
+
         function showLoninHeader() {
             document.getElementById('login-header').style.display = "flex";
             document.getElementById('normal-header').style.display = "none";
@@ -650,48 +660,37 @@
             document.getElementById('normal-header').style.display = "flex";
         }
 
-
-
         function showLoginSearchInput() {
             var loginSearchMenu = document.getElementById('login-search-menu');
-
             loginSearchMenu.classList.toggle('hidden');
-
         }
-
 
         function showLoginSearchTriangle() {
             var loginSearchTriangle = document.getElementById('login-search-triangle');
-
             loginSearchTriangle.classList.toggle('hidden');
         }
 
         function showSearchInput() {
             var searchMenu = document.getElementById('search-menu');
-
             searchMenu.classList.toggle('hidden');
-
         }
-
 
         function showSearchTriangle() {
             var searchTriangle = document.getElementById('search-triangle');
-
             searchTriangle.classList.toggle('hidden');
         }
 
-
         function showNotificationsMenu() {
             var notificationsMenu = document.getElementById('notifications-menu');
-
             notificationsMenu.classList.toggle('hidden');
         }
 
         function showUserMenu() {
             var userMenu = document.getElementById('user-menu-content');
-
             userMenu.classList.toggle('hidden');
         }
+
+
 
 
 
