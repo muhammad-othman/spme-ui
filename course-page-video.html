@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SPME - Special Progam for Material Education</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="arabic-container">
+    <header>
+        <div class="container flex header-items">
+            <a href="#" onclick="showLoninHeader()"> <img class="logo" src="assets/logo.svg"> </a>
+
+            <div class="header-icons flex">
+                <div onClick="showSearchInput();" class="search-icon"></div>
+
+                <div id="search-menu" class="search-menu hidden">
+                    <input class="search" type="search" placeholder="ابحث عن دورة">
+                    <div class="search-input-icon"></div>
+                </div>
+
+                <div id="login-header" class="login-menus flex">
+                    <a id="loginChangeLanguageButton" class="button activable-item text-button english-button"
+                        onClick="changeLanguage()">English</a>
+
+                    <div class="notification-container">
+                        <div onClick="showNotificationsMenu()" class="notifications-icon"></div>
+                        <div id="notifications-menu" class="notifications-menu hidden">
+                            <div class="triangle"></div>
+                            <ul>
+                                <li> <span>الاشعارات</span> <span>مشاهدة الكل</span> </li>
+                                <li> <span>تم تفعيل الدورة</span><span>02:23 PM</span> </li>
+                                <li> <span>الاختبار جاهز</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                            </ul>
+                        </div>
+                        <div class="number-of-notifications">0</div>
+                    </div>
+
+                    <div class="user-container">
+                        <div onClick="showUserMenu()" class="user-content">
+                            <div class="user-img"><img src="assets/man-icon.png"></div>
+                            <span class="user-name">محمد عثمان</span>
+                            <div class="user-arrow-icon"></div>
+                        </div>
+                        <div id="user-menu-content" class="user-menu-content hidden">
+                            <div class="triangle"></div>
+                            <ul class="user-menu">
+                                <li>دوراتي</li>
+                                <li>تعديل حسابي</li>
+                                <li> <a href="change-password.html">تغيير كلمة المرور </a></li>
+                                <li id="loginVerifyCertificateButton">تحقق من شهادة</li>
+                                <li><a id="loginChangeLanguageButtonInside" onClick="changeLanguage()">English</a></li>
+                                <li onclick="showNormalHeader()">تسجيل الخروج</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <nav id="normal-header" class="logout-menus flex">
+                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
+                    <label for="show-more-checkbox" class="show-more-icon">
+                        <img src="assets/menu-icon.svg">
+                    </label>
+                    <ul class="menu">
+                        <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
+                                href="#">تحقق من شهادة</a></li>
+                        <li><a id="changeLanguageButton" class="button activable-item text-button"
+                                onClick="changeLanguage()">English</a></li>
+                        <li><a id="loginButton" class="button activable-item outlined-button" href="/login.html">تسجيل
+                                الدخول</a></li>
+                        <li><a id="registerButton" class="button activable-item primary-button"
+                                href="/new-account.html">حساب جديد</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+
+        </div>
+
+
+    </header>
+    <section class="common-title-content">
+        <div class="container">
+            <h2>دورة تعليمية لتعليم برمجه الجوال</h2>
+            <p>الرئيسية / الدورات / دورة تعليمية لتعليم برمجه الجوال</p>
+        </div>
+    </section>
+    <section class="course-video-container">
+        <div class="course-video-content container">
+            <div class="video-container">
+                <div class="video-background">
+                    <img src="/assets/workers-3.svg">
+                    <div class="video-icon-big-background">
+                        <div class="video-icon-background">
+                            <div class="play-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="change-video-container">
+                <div class="change-video-content">
+                    <div class="change-video-head">
+                        <h3>التالي</h3>
+                        <div class="change-video-icon-background">
+                            <div class="change-video-icon"></div>
+                        </div>
+                    </div>
+                    <span class="change-video-name">اسم المحاضرة</span>
+                </div>
+                <div class="change-video-content">
+                    <div class="change-video-head">
+                        <h3>السابق</h3>
+                        <div class="change-video-icon-background">
+                            <div class="change-video-icon"></div>
+                        </div>
+                    </div>
+                    <span class="change-video-name">اسم المحاضرة</span>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </section>
+    <section class="course-content">
+        <div class="course-content-items container">
+            <div class="course-item-content  course-overview">
+                <div class="course-benefits">
+                    <div class="radio-course-padding">
+                        <h3>نبذة تعريفية</h3>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إزيادة عدد الحروف التى
+                            يولدهاالتطبيق.
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                            حيث يمكنك أن تولد مثل هذا اأو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في
+                            نفس
+                            المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديمن التى يولدها التطبيق.
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                            المساحة،
+                            لقد تم توليد هذا النص من مولد النص ، حيث يمكنك أن تولد مثل هذا النص</p>
+                    </div>
+                </div>
+                <div class="course-benefits">
+                    <div class="radio-course-padding">
+                        <h3>مميزات الدورة</h3>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إزيادة عدد الحروف التى
+                            يولدهاالتطبيق.
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                            حيث يمكنك أن تولد مثل هذا اأو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في
+                            نفس
+                            المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديمن التى يولدها التطبيق.
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                            المساحة،
+                            لقد تم توليد هذا النص من مولد النص ، حيث يمكنك أن تولد مثل هذا النص</p>
+                    </div>
+                </div>
+                <div class="course-skills">
+                    <div class="radio-course-padding">
+                        <h3>المهارات</h3>
+                        <div class="skills-items">
+                            <ul>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                            </ul>
+                            <ul>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                                <li>اسم المهارة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-item-content hidden course-details">
+                <h3> فديوهات الدورة :</h3>
+                <ul class="course-video">
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <span class="video-questions">٥ أسئلة</span>
+                            <span class="video-time">10 Min</span>
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <span class="video-questions">٥ أسئلة</span>
+                            <span class="video-time">10 Min</span>
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="lock-icon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="video-name">
+                            <div class="video-icon"></div>
+                            <span> يتم كتابة اسم المحاضرة</span>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="course-item-content hidden course-trainer">
+                <div class="course-trainer-items">
+                    <div class="trainer-content">
+                        <div class="trainer-img"><img src="assets/man2.jpg"></div>
+                        <div class="trainer-info">
+                            <h3>محمد عثمان</h3>
+                            <span>مدرس تنمية بشرية</span>
+                        </div>
+                    </div>
+                    <div class="price-content">
+                        <span>سعر الدورة</span>
+                        <span class="trainer-price">300 جنيه</span>
+                    </div>
+                </div>
+            </div>
+            <div class="course-item-content hidden course-comments">
+                <div class="course-comments-items">
+                    <div class="course-comments-item">
+                        <div class="comment-container">
+                            <div class="comment-img-content">
+                                <div class="comment-img">
+                                    <img src="/assets/man3.jpg">
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <div class="comment-title">
+                                        <h4>ابراهيم شمس</h3>
+                                            <div class="comment-stars-content">
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                            </div>
+                                    </div>
+                                    <div class="comment-date">July 23 | 06:43</div>
+                                </div>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص م نمولد
+                                    النص العربى،
+                                    حيث يمكنك أن تولد مثل هذا النص هذا النص هو مثال لنص يمكن
+                                    أن يستبدل في نفس المساحة، لقد تم توليد هذا النص م نمولد النص العربى،</p>
+                            </div>
+                        </div>
+                        <div class="comment-container">
+                            <div class="comment-img-content">
+                                <div class="comment-img">
+                                    <img src="/assets/man3.jpg">
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <div class="comment-title">
+                                        <h4>ابراهيم شمس</h3>
+                                            <div class="comment-stars-content">
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                                <div class="comment-star"></div>
+                                            </div>
+                                    </div>
+                                    <div class="comment-date">July 23 | 06:43</div>
+                                </div>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص م نمولد
+                                    النص العربى،
+                                    حيث يمكنك أن تولد مثل هذا النص هذا النص هو مثال لنص يمكن
+                                    أن يستبدل في نفس المساحة، لقد تم توليد هذا النص م نمولد النص العربى،</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="your-comment">
+                        <div class="comment-title">
+                            <h3>أضف تعليقا :</h3>
+                            <div class="comment-stars-content">
+                                <div class="comment-star"></div>
+                                <div class="comment-star"></div>
+                                <div class="comment-star"></div>
+                                <div class="comment-star"></div>
+                                <div class="comment-star"></div>
+                            </div>
+                        </div>
+                        <input class="comment" type="email" placeholder="اكتب تعليقك">
+                        <button class="button activable-item primary-button send-button">ارسال</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="courses-container container">
+        <div class="top-info">
+            <div class="title-info">
+                <h2>الدورات المتعلقة</h2>
+            </div>
+        </div>
+        <div class="common-cards">
+            <a href="index.html">
+                <div class="common-card activable-item">
+                    <div class="card-img">
+                        <img src="assets/course-img1.svg">
+                    </div>
+                    <div class="card-content">
+                        <div class="trainer">
+                            <div class="trainer-img"><img src="assets/man-icon.png"></div>
+                            <p>المدرب: أحمد صالح</p>
+                        </div>
+                        <div class="card-summary">
+                            <h4>فترة تدريبية للترقي مدير مالي</h4>
+                            <p class="common-paragraph">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                                لقد تم توليد هذا النص من مولد النص العربى،
+                            </p>
+                        </div>
+                        <div class="card-info">
+                            <ul>
+                                <li><img src="assets/calendar.svg">
+                                    <span>20 اسبوع</span>
+                                </li>
+                                <li><img src="assets/student.svg">
+                                    <span>20 طالب</span>
+                                </li>
+                                <li><img src="assets/books.svg">
+                                    <span>20 درس</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="common-card-button activable-item" href="#">
+                            <span>
+                                مشاهدة المزيد
+                            </span>
+                            <div class="arrow-icon"></div>
+                        </a>
+                    </div>
+                </div>
+            </a>
+
+            <div class="common-card activable-item">
+                <div class="card-img">
+                    <img src="assets/course-img6.svg">
+                </div>
+                <div class="card-content">
+                    <div class="trainer">
+                        <div class="trainer-img"><img src="assets/man-icon.png"></div>
+                        <p>المدرب: أحمد صالح</p>
+                    </div>
+                    <div class="card-summary">
+                        <h4>فترة تدريبية للترقي مدير مالي</h4>
+                        <p class="common-paragraph">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                        </p>
+                    </div>
+                    <div class="card-info">
+                        <ul>
+                            <li><img src="assets/calendar.svg">
+                                <span>20 اسبوع</span>
+                            </li>
+                            <li><img src="assets/student.svg">
+                                <span>20 طالب</span>
+                            </li>
+                            <li><img src="assets/books.svg">
+                                <span>20 درس</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="common-card-button activable-item" href="#">
+                        <span>
+                            مشاهدة المزيد
+                        </span>
+                        <div class="arrow-icon"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="common-card activable-item">
+                <div class="card-img">
+                    <img src="assets/course-img5.svg">
+                </div>
+                <div class="card-content">
+                    <div class="trainer">
+                        <div class="trainer-img"><img src="assets/man-icon.png"></div>
+                        <p>المدرب: أحمد صالح</p>
+                    </div>
+                    <div class="card-summary">
+                        <h4>فترة تدريبية للترقي مدير مالي</h4>
+                        <p class="common-paragraph">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                            لقد تم توليد هذا النص من مولد النص العربى،
+                        </p>
+                    </div>
+                    <div class="card-info">
+                        <ul>
+                            <li><img src="assets/calendar.svg">
+                                <span>20 اسبوع</span>
+                            </li>
+                            <li><img src="assets/student.svg">
+                                <span>20 طالب</span>
+                            </li>
+                            <li><img src="assets/books.svg">
+                                <span>20 درس</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="common-card-button activable-item" href="#">
+                        <span>
+                            مشاهدة المزيد
+                        </span>
+                        <div class="arrow-icon"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navigate-courses">
+            <div class="arrow-icon activable-item arrow-icon-right"></div>
+            <div class="arrow-icon activable-item active-arrow-icon"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="top-footer-part">
+            <div class="footer-content container">
+                <div class="subscribe">
+                    <a href="/index.html"><img src="assets/logo-white.png"></a>
+                    <p class="common-paragraph">
+                        هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
+                    </p>
+                    <h4>اشترك لتصلك الدورات الجديدة</h4>
+                    <div class="subscribe-container">
+                        <div class="subscribe-search-icon activable-item">اشترك</div>
+                        <input class="subscribe" type="email" placeholder="برجاء ادخال البريد الألكتروني">
+                    </div>
+                </div>
+                <div class="quick-links">
+                    <div class="quick-links-item">
+                        <h3>روابط سريعة</h3>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الفترات التدريبية</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الدورات التدريبية</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الأسئلة الشائعة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a href="/contact-us.html">تواصل معنا</a>
+                        </div>
+                    </div>
+                    <div class="quick-links-item">
+                        <h3>روابط سريعة</h3>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>تحقق من شهادة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>المدونة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>من نحن</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>شروط الاستخدام</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <h3>تواصل معنا</h3>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon map icon"></div>
+                            <a>العنوان هنا بالتفصيل</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon phone icon"></div>
+                            <a>123456789</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon email icon"></div>
+                            <a>info@name.com.sa</a>
+                        </div>
+                    </div>
+                    <div class="app-links">
+                        <div class="app-icon activable-item facebook"></div>
+                        <div class="app-icon activable-item whatsapp"></div>
+                        <div class="app-icon activable-item instagram"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer-part">
+            جميع الحقوق محفوظة لموقع SMPE
+        </div>
+
+    </footer>
+
+    <script>
+        function changeLanguage(event) {
+            var body = document.getElementsByTagName("body")[0];
+            body.classList.toggle("arabic-container");
+            if (document.getElementById('changeLanguageButton').innerText == 'العربية') {
+                document.getElementById('verifyCertificateButton').innerText = 'تحقق من شهادة'
+                document.getElementById('loginVerifyCertificateButton').innerText = 'تحقق من شهادة'
+                document.getElementById('loginButton').innerText = 'تسجيل الدخول'
+                document.getElementById('registerButton').innerText = 'حساب جديد'
+                document.getElementById('changeLanguageButton').innerText = 'English'
+                document.getElementById('loginChangeLanguageButton').innerText = 'English'
+                document.getElementById('loginChangeLanguageButtonInside').innerText = 'English'
+            }
+            else {
+                document.getElementById('verifyCertificateButton').innerText = 'Verify Certificate'
+                document.getElementById('loginVerifyCertificateButton').innerText = 'Verify Certificate'
+                document.getElementById('loginButton').innerText = 'Log In'
+                document.getElementById('registerButton').innerText = 'Sign Up'
+                document.getElementById('changeLanguageButton').innerText = 'العربية'
+                document.getElementById('loginChangeLanguageButton').innerText = 'العربية'
+                document.getElementById('loginChangeLanguageButtonInside').innerText = 'العربية'
+            }
+        }
+
+        function showWarningMessege() {
+            document.getElementById('warning-messege-content').style.display = "flex";
+        }
+
+        function hideWarningMessege() {
+            document.getElementById('warning-messege-content').style.display = "none";
+        }
+
+        function showLoninHeader() {
+            document.getElementById('login-header').style.display = "flex";
+            document.getElementById('normal-header').style.display = "none";
+        }
+
+        function showNormalHeader() {
+            document.getElementById('login-header').style.display = "none";
+            document.getElementById('normal-header').style.display = "flex";
+        }
+
+        function showLoginSearchInput() {
+            var loginSearchMenu = document.getElementById('login-search-menu');
+            loginSearchMenu.classList.toggle('hidden');
+        }
+
+        function showLoginSearchTriangle() {
+            var loginSearchTriangle = document.getElementById('login-search-triangle');
+            loginSearchTriangle.classList.toggle('hidden');
+        }
+
+        function showSearchInput() {
+            var searchMenu = document.getElementById('search-menu');
+            searchMenu.classList.toggle('hidden');
+        }
+
+        function showSearchTriangle() {
+            var searchTriangle = document.getElementById('search-triangle');
+            searchTriangle.classList.toggle('hidden');
+        }
+
+        function showNotificationsMenu() {
+            var notificationsMenu = document.getElementById('notifications-menu');
+            notificationsMenu.classList.toggle('hidden');
+        }
+
+        function showUserMenu() {
+            var userMenu = document.getElementById('user-menu-content');
+            userMenu.classList.toggle('hidden');
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
