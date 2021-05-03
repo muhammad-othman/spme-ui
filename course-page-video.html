@@ -100,9 +100,12 @@
     <section class="course-video-container">
         <div class="course-video-content container">
             <div class="video-container">
-                <div class="video-background">
-                    <img src="/assets/workers-3.svg">
-                    <div class="video-icon-big-background">
+                <div class="video-background" onclick="showVideo()">
+                    <video id="video-src" class="video-scr-background" controls>
+                        <source src="/videos/Pulcino Pio.mp4" type="video/mp4">
+                    </video>
+                    <img id="video-img" src="/assets/workers-3.svg">
+                    <div id="video-icon-img" class="video-icon-big-background">
                         <div class="video-icon-background">
                             <div class="play-icon"></div>
                         </div>
@@ -655,10 +658,6 @@
             loginSearchTriangle.classList.toggle('hidden');
         }
 
-        function showSearchInput() {
-            var searchMenu = document.getElementById('search-menu');
-            searchMenu.classList.toggle('hidden');
-        }
 
         function showSearchTriangle() {
             var searchTriangle = document.getElementById('search-triangle');
@@ -675,8 +674,16 @@
             userMenu.classList.toggle('hidden');
         }
 
+        function showVideo() {
+            var myVideo = document.getElementById('video-src');
 
+            document.getElementById('video-icon-img').style.display = "none";
+            document.getElementById('video-img').style.display = "none";
+            myVideo.style.display = "block";
+            myVideo.play();
 
+        }
+        
 
 
 

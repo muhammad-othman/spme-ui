@@ -1857,6 +1857,7 @@ header .show-more-icon {
   margin: 2.5rem 0;
 }
 .course-video-container .course-video-content .video-container .video-background {
+  cursor: pointer;
   max-width: 50rem;
   max-height: 28rem;
   margin-bottom: 1rem;
@@ -1867,6 +1868,11 @@ header .show-more-icon {
 .course-video-container .course-video-content .video-container .video-background img {
   width: 100%;
   opacity: 0.4;
+}
+.course-video-container .course-video-content .video-container .video-background .video-scr-background {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
 }
 .course-video-container .course-video-content .video-container .video-background .video-icon-big-background {
   background: #115fafa3;

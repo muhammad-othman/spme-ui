@@ -3,6 +3,7 @@
   .course-video-content {
     .video-container {
       .video-background {
+        cursor: pointer;
         max-width: 50rem;
         max-height: 28rem;
         margin-bottom: 1rem;
@@ -12,6 +13,11 @@
         img {
           width: 100%;
           opacity: 0.4;
+        }
+        .video-scr-background {
+          width: 100%;
+          display: none;
+          border-radius: 10px;
         }
         .video-icon-big-background {
           background: #115fafa3;
@@ -46,17 +52,14 @@
     .change-video-container {
       .change-video-content {
         .change-video-head {
-            h3{
-
-            }
+          h3 {
+          }
           .change-video-icon-background {
-            .change-video-icon{
-                
+            .change-video-icon {
             }
           }
         }
-        .change-video-name{
-            
+        .change-video-name {
         }
       }
     }
