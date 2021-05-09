@@ -20,14 +20,14 @@
                 <div onClick="showSearchInput();" class="search-icon"></div>
 
                 <div id="search-menu" class="search-menu hidden">
-                    <input class="search" type="search"  placeholder="ابحث عن دورة">
+                    <input class="search" type="search" placeholder="ابحث عن دورة">
                     <div class="search-input-icon"></div>
                 </div>
 
 
 
                 <div id="login-header" class="login-menus flex">
-                    <a id="loginChangeLanguageButton" class="button activable-item text-button"
+                    <a id="loginChangeLanguageButton" class="button activable-item text-button english-button"
                         onClick="changeLanguage()">English</a>
 
                     <div class="notification-container">
@@ -53,7 +53,7 @@
                         <div onClick="showUserMenu()" class="user-content">
                             <div class="user-img"><img src="assets/man-icon.png"></div>
                             <span class="user-name">محمد عثمان</span>
-                            <div class="user-arrow-icon"></div>
+                            <div class="user-arrow-icon small-arrow"></div>
                         </div>
                         <div id="user-menu-content" class="user-menu-content hidden">
                             <div class="triangle"></div>
@@ -70,11 +70,11 @@
                 </div>
 
                 <nav id="normal-header" class="logout-menus flex">
-                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
                     <label for="show-more-checkbox" class="show-more-icon">
                         <img src="assets/menu-icon.svg">
                     </label>
-                    <ul class="menu">
+                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
+                    <ul class="menu hidden">
                         <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
                                 href="#">تحقق من شهادة</a></li>
                         <li><a id="changeLanguageButton" class="button activable-item text-button"
@@ -164,43 +164,45 @@
                         </div>
                     </div>
                 </a>
-                <div class="common-card activable-item">
-                    <div class="card-img">
-                        <img src="assets/course-img2.svg">
+                <a href="course-page-video.html">
+                    <div class="common-card activable-item">
+                        <div class="card-img">
+                            <img src="assets/course-img2.svg">
+                        </div>
+                        <div class="card-content">
+                            <div class="trainer">
+                                <div class="trainer-img"><img src="assets/man-icon.png"></div>
+                                <p>المدرب: أحمد صالح</p>
+                            </div>
+                            <div class="card-summary">
+                                <h4>فترة تدريبية للترقي مدير مالي</h4>
+                                <p class="common-paragraph">
+                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                                    لقد تم توليد هذا النص من مولد النص العربى،
+                                </p>
+                            </div>
+                            <div class="card-info">
+                                <ul>
+                                    <li><img src="assets/calendar.svg">
+                                        <span>20 اسبوع</span>
+                                    </li>
+                                    <li><img src="assets/student.svg">
+                                        <span>20 طالب</span>
+                                    </li>
+                                    <li><img src="assets/books.svg">
+                                        <span>20 درس</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="common-card-button activable-item" href="#">
+                                <span>
+                                    مشاهدة المزيد
+                                </span>
+                                <div class="arrow-icon"></div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <div class="trainer">
-                            <div class="trainer-img"><img src="assets/man-icon.png"></div>
-                            <p>المدرب: أحمد صالح</p>
-                        </div>
-                        <div class="card-summary">
-                            <h4>فترة تدريبية للترقي مدير مالي</h4>
-                            <p class="common-paragraph">
-                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                                لقد تم توليد هذا النص من مولد النص العربى،
-                            </p>
-                        </div>
-                        <div class="card-info">
-                            <ul>
-                                <li><img src="assets/calendar.svg">
-                                    <span>20 اسبوع</span>
-                                </li>
-                                <li><img src="assets/student.svg">
-                                    <span>20 طالب</span>
-                                </li>
-                                <li><img src="assets/books.svg">
-                                    <span>20 درس</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <a class="common-card-button activable-item" href="#">
-                            <span>
-                                مشاهدة المزيد
-                            </span>
-                            <div class="arrow-icon"></div>
-                        </a>
-                    </div>
-                </div>
+                </a>
                 <div class="common-card activable-item">
                     <div class="card-img">
                         <img src="assets/course-img3.svg">
@@ -566,7 +568,7 @@
                         هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
                     </p>
                     <h4>اشترك لتصلك الدورات الجديدة</h4>
-                    <div class="subscribe-search-icon-container">
+                    <div class="subscribe-container">
                         <div class="subscribe-search-icon activable-item">اشترك</div>
                         <input class="subscribe" type="email" placeholder="برجاء ادخال البريد الألكتروني">
                     </div>
@@ -675,12 +677,6 @@
             document.getElementById('login-header').style.display = "none";
             document.getElementById('normal-header').style.display = "flex";
         }
-
-        function showLoginSearchInput() {
-            var loginSearchMenu = document.getElementById('login-search-menu');
-            loginSearchMenu.classList.toggle('hidden');
-        }
-
         function showSearchInput() {
             var searchMenu = document.getElementById('search-menu');
             searchMenu.classList.toggle('hidden');

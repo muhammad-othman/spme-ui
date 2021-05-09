@@ -17,7 +17,7 @@
             <a href="#" onclick="showLoninHeader()"> <img class="logo" src="assets/logo.svg"> </a>
 
             <div class="header-icons flex">
-                <div onClick="showSearchInput();" class="search-icon"></div>
+                <div onClick="showSearchInput()" class="search-icon"></div>
 
                 <div id="search-menu" class="search-menu hidden">
                     <input class="search" type="search" placeholder="ابحث عن دورة">
@@ -51,7 +51,7 @@
                         <div onClick="showUserMenu()" class="user-content">
                             <div class="user-img"><img src="assets/man-icon.png"></div>
                             <span class="user-name">محمد عثمان</span>
-                            <div class="user-arrow-icon"></div>
+                            <div class="user-arrow-icon small-arrow"></div>
                         </div>
                         <div id="user-menu-content" class="user-menu-content hidden">
                             <div class="triangle"></div>
@@ -68,11 +68,11 @@
                 </div>
 
                 <nav id="normal-header" class="logout-menus flex">
-                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
                     <label for="show-more-checkbox" class="show-more-icon">
                         <img src="assets/menu-icon.svg">
                     </label>
-                    <ul class="menu">
+                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
+                    <ul class="menu hidden">
                         <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
                                 href="#">تحقق من شهادة</a></li>
                         <li><a id="changeLanguageButton" class="button activable-item text-button"
@@ -97,7 +97,7 @@
             <p>الرئيسية / الدورات / دورة تعليمية لتعليم برمجه الجوال</p>
         </div>
     </section>
-    <section class="course-video-container">
+    <section class="course-video-container container">
         <div class="course-video-content container">
             <div class="video-container">
                 <div class="video-background" onclick="showVideo()">
@@ -115,28 +115,129 @@
             <div class="change-video-container">
                 <div class="change-video-content">
                     <div class="change-video-head">
-                        <h3>التالي</h3>
-                        <div class="change-video-icon-background">
-                            <div class="change-video-icon"></div>
+                        <div class="change-video-icon-background primary-button button">
+                            <div class="change-video-icon small-arrow"></div>
                         </div>
+                        <h3 class="right-button">التالي</h3>
                     </div>
                     <span class="change-video-name">اسم المحاضرة</span>
                 </div>
                 <div class="change-video-content">
                     <div class="change-video-head">
                         <h3>السابق</h3>
-                        <div class="change-video-icon-background">
-                            <div class="change-video-icon"></div>
+                        <div class="change-video-icon-background selected-button button left-button">
+                            <div class="change-video-icon small-arrow left-arrow"></div>
                         </div>
                     </div>
                     <span class="change-video-name">اسم المحاضرة</span>
                 </div>
             </div>
+        </div>
+        <div class="courses-names-content container">
+            <div class="course-item-content course-details">
+                <h3> ملفات الدورة :</h3>
+                <ul class="course-video-lessons">
+                    <li class="lesson-list">
+                        <div class="lesson-container">
+                            <input class="hidden-input hidden" id="lesson-content-1" type="checkbox">
+                            <label for="lesson-content-1" class="lesson-content">
+                                <div class="video-icon"></div>
+                                <span>اسم المحاضرة هنا</span>
+                            </label>
+                            <div class="course-list-lessons menu hidden">
+                                <span>الدرس الأول</span>
+                                <span>الدرس الثاني</span>
+                                <span>اختبار علي الدرس الأول</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lesson-list">
+                        <div class="lesson-container">
+                            <input class="hidden-input hidden" id="lesson-content-2" type="checkbox">
+                            <label for="lesson-content-2" class="lesson-content">
+                                <div class="video-icon"></div>
+                                <span>اسم المحاضرة هنا</span>
+                            </label>
+                            <div class="course-list-lessons menu hidden">
+                                <span>الدرس الأول</span>
+                                <span>الدرس الثاني</span>
+                                <span>اختبار علي الدرس الأول</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lesson-list">
+                        <div class="lesson-container">
+                            <input class="hidden-input hidden" id="lesson-content-3" type="checkbox">
+                            <label for="lesson-content-3" class="lesson-content">
+                                <div class="video-icon"></div>
+                                <span>اسم المحاضرة هنا</span>
+                            </label>
+                            <div class="course-list-lessons menu hidden">
+                                <span>الدرس الأول</span>
+                                <span>الدرس الثاني</span>
+                                <span>اختبار علي الدرس الأول</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lesson-list">
+                        <div class="lesson-container">
+                            <input class="hidden-input hidden" id="lesson-content-4" type="checkbox">
+                            <label for="lesson-content-4" class="lesson-content">
+                                <div class="video-icon"></div>
+                                <span>اسم المحاضرة هنا</span>
+                            </label>
+                            <div class="course-list-lessons menu hidden">
+                                <span>الدرس الأول</span>
+                                <span>الدرس الثاني</span>
+                                <span>اختبار علي الدرس الأول</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lesson-list">
+                        <div class="lesson-container">
+                            <input class="hidden-input hidden" id="lesson-content-5" type="checkbox">
+                            <label for="lesson-content-5" class="lesson-content">
+                                <div class="video-icon"></div>
+                                <span>اسم المحاضرة هنا</span>
+                            </label>
+                            <div class="course-list-lessons menu hidden">
+                                <span>الدرس الأول</span>
+                                <span>الدرس الثاني</span>
+                                <span>اختبار علي الدرس الأول</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lesson-list">
+                        <div class="lesson-container">
+                            <input class="hidden-input hidden" id="lesson-content-6" type="checkbox">
+                            <label for="lesson-content-6" class="lesson-content">
+                                <div class="video-icon"></div>
+                                <span>اسم المحاضرة هنا</span>
+                            </label>
+                            <div class="course-list-lessons menu hidden">
+                                <span>الدرس الأول</span>
+                                <span>الدرس الثاني</span>
+                                <span>اختبار علي الدرس الأول</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lesson-list">
+                        <div class="lesson-container">
+                            <input class="hidden-input hidden" id="lesson-content-7" type="checkbox">
+                            <label for="lesson-content-7" class="lesson-content">
+                                <div class="video-icon"></div>
+                                <span>اسم المحاضرة هنا</span>
+                            </label>
+                            <div class="course-list-lessons menu hidden">
+                                <span>الدرس الأول</span>
+                                <span>الدرس الثاني</span>
+                                <span>اختبار علي الدرس الأول</span>
+                            </div>
+                        </div>
+                    </li>
 
-
-
-
-
+                </ul>
+            </div>
         </div>
 
     </section>
@@ -401,7 +502,7 @@
             </div>
         </div>
         <div class="common-cards">
-            <a href="index.html">
+            <a href="course-page.html">
                 <div class="common-card activable-item">
                     <div class="card-img">
                         <img src="assets/course-img1.svg">
@@ -440,44 +541,45 @@
                     </div>
                 </div>
             </a>
-
-            <div class="common-card activable-item">
-                <div class="card-img">
-                    <img src="assets/course-img6.svg">
+            <a href="course-page-video.html">
+                <div class="common-card activable-item">
+                    <div class="card-img">
+                        <img src="assets/course-img6.svg">
+                    </div>
+                    <div class="card-content">
+                        <div class="trainer">
+                            <div class="trainer-img"><img src="assets/man-icon.png"></div>
+                            <p>المدرب: أحمد صالح</p>
+                        </div>
+                        <div class="card-summary">
+                            <h4>فترة تدريبية للترقي مدير مالي</h4>
+                            <p class="common-paragraph">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                                لقد تم توليد هذا النص من مولد النص العربى،
+                            </p>
+                        </div>
+                        <div class="card-info">
+                            <ul>
+                                <li><img src="assets/calendar.svg">
+                                    <span>20 اسبوع</span>
+                                </li>
+                                <li><img src="assets/student.svg">
+                                    <span>20 طالب</span>
+                                </li>
+                                <li><img src="assets/books.svg">
+                                    <span>20 درس</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="common-card-button activable-item" href="#">
+                            <span>
+                                مشاهدة المزيد
+                            </span>
+                            <div class="arrow-icon"></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <div class="trainer">
-                        <div class="trainer-img"><img src="assets/man-icon.png"></div>
-                        <p>المدرب: أحمد صالح</p>
-                    </div>
-                    <div class="card-summary">
-                        <h4>فترة تدريبية للترقي مدير مالي</h4>
-                        <p class="common-paragraph">
-                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                            لقد تم توليد هذا النص من مولد النص العربى،
-                        </p>
-                    </div>
-                    <div class="card-info">
-                        <ul>
-                            <li><img src="assets/calendar.svg">
-                                <span>20 اسبوع</span>
-                            </li>
-                            <li><img src="assets/student.svg">
-                                <span>20 طالب</span>
-                            </li>
-                            <li><img src="assets/books.svg">
-                                <span>20 درس</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <a class="common-card-button activable-item" href="#">
-                        <span>
-                            مشاهدة المزيد
-                        </span>
-                        <div class="arrow-icon"></div>
-                    </a>
-                </div>
-            </div>
+            </a>
             <div class="common-card activable-item">
                 <div class="card-img">
                     <img src="assets/course-img5.svg">
@@ -648,16 +750,10 @@
             document.getElementById('normal-header').style.display = "flex";
         }
 
-        function showLoginSearchInput() {
-            var loginSearchMenu = document.getElementById('login-search-menu');
-            loginSearchMenu.classList.toggle('hidden');
+        function showSearchInput() {
+            var searchMenu = document.getElementById('search-menu');
+            searchMenu.classList.toggle('hidden');
         }
-
-        function showLoginSearchTriangle() {
-            var loginSearchTriangle = document.getElementById('login-search-triangle');
-            loginSearchTriangle.classList.toggle('hidden');
-        }
-
 
         function showSearchTriangle() {
             var searchTriangle = document.getElementById('search-triangle');
@@ -683,7 +779,7 @@
             myVideo.play();
 
         }
-        
+
 
 
 

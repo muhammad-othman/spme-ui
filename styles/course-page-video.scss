@@ -1,5 +1,5 @@
 .course-video-container {
-  margin: 2.5rem 0;
+  margin: 2.5rem auto;
   .course-video-content {
     .video-container {
       .video-background {
@@ -42,26 +42,128 @@
     }
     .video-background:hover .video-icon-big-background {
       background: #ff7c00a3;
+      cursor: pointer;
       .video-icon-background {
         background: $secondary;
+        cursor: pointer;
       }
     }
     .video-background:hover img {
       opacity: 0.2;
+      cursor: pointer;
     }
     .change-video-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem;
       .change-video-content {
         .change-video-head {
-          h3 {
+          display: flex;
+          align-items: center;
+          .left-button {
+            margin: 0.8rem 0.6rem;
+          }
+          .right-button {
+            margin: 0.8rem 0.6rem;
           }
           .change-video-icon-background {
+            padding: 0.6rem;
             .change-video-icon {
+              width: 0.68rem;
+              height: 0.68rem;
+              background: $white;
+              transform: rotate(270deg);
+              -webkit-transform: rotate(270deg);
+            }
+            .left-arrow {
+              transform: rotate(90deg);
+              -webkit-transform: rotate(90deg);
             }
           }
         }
         .change-video-name {
+          color: $grey-5;
         }
       }
+    }
+  }
+  .courses-names-content {
+    .course-details {
+      border: 1px solid $grey-3;
+      border-radius: 10px;
+      h3 {
+        background: $primary;
+        border-radius: 10px 10px 0px 0px;
+        padding: 1rem;
+        color: $white;
+        font-size: 1rem;
+      }
+      .course-video-lessons {
+        li {
+          padding: 1.3rem 0.5rem;
+          cursor: pointer;
+          border-bottom: 2px solid $grey-8;
+          .lesson-container {
+            .lesson-content {
+              display: flex;
+              cursor: pointer;
+              .video-icon {
+                width: 1.5rem;
+                height: 1.5rem;
+                background: $primary;
+                cursor: pointer;
+              }
+              span {
+                cursor: pointer;
+
+                margin: 0 0.6rem;
+                font-weight: bolder;
+              }
+            }
+            .lesson-content:hover .video-icon {
+              background: $secondary;
+            }
+            .hidden-input:checked ~ label > span {
+              color: $primary;
+            }
+            .course-list-lessons {
+              flex-direction: column;
+              margin-top: 0.9rem;
+              span {
+                font-size: 0.7rem;
+                font-weight: bold;
+                margin: 0.4rem 2.5rem;
+                color: $grey-4;
+              }
+              span:hover {
+                color: $secondary;
+              }
+            }
+          }
+        }
+
+        li:hover {
+          box-shadow: 0 2px 10px 2px #00000014;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@include big-tablet-media-query {
+  .course-video-container{
+    display: flex;
+    align-items: flex-start;
+    .course-video-content{
+      margin-top: 0;
+      width: 65%;
+    }
+    .courses-names-content{
+      margin-top: 0;
+      width: 30%;
     }
   }
 }

@@ -34,7 +34,7 @@
   mask: url(../assets/instagram.svg) no-repeat center;
 }
 
-.gmail{
+.gmail {
   -webkit-mask: url(../assets/red-gmail.svg) no-repeat center;
   mask: url(../assets/red-gmail.svg) no-repeat center;
 }
@@ -45,20 +45,25 @@
 }
 
 .video-icon {
-  -webkit-mask: url(../assets/video.svg)  center center / contain no-repeat;
-  mask: url(../assets/video.svg)  center center / contain no-repeat;
+  -webkit-mask: url(../assets/video.svg) center center / contain no-repeat;
+  mask: url(../assets/video.svg) center center / contain no-repeat;
 }
 
 .play-icon {
-  -webkit-mask: url(../assets/icon-play.svg)  center center / contain no-repeat;
-  mask: url(../assets/icon-play.svg)  center center / contain no-repeat;
+  -webkit-mask: url(../assets/icon-play.svg) center center / contain no-repeat;
+  mask: url(../assets/icon-play.svg) center center / contain no-repeat;
 }
 
 .lock-icon {
-  -webkit-mask: url(../assets/lock.svg)  center center / contain no-repeat;
-  mask: url(../assets/lock.svg)  center center / contain no-repeat;
+  -webkit-mask: url(../assets/lock.svg) center center / contain no-repeat;
+  mask: url(../assets/lock.svg) center center / contain no-repeat;
 }
-.comment-star{  
-  -webkit-mask: url(../assets/star.svg)  center center / contain no-repeat;
-  mask: url(../assets/star.svg)  center center / contain no-repeat;
+.comment-star {
+  -webkit-mask: url(../assets/star.svg) center center / contain no-repeat;
+  mask: url(../assets/star.svg) center center / contain no-repeat;
+}
+
+.small-arrow {
+  -webkit-mask: url(../assets/icon-down.svg) center / contain no-repeat;
+  mask: url(../assets/icon-down.svg) center / contain no-repeat;
 }

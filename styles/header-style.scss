@@ -192,12 +192,7 @@ header {
             cursor: pointer;
             width: 0.6rem;
             height: 0.6rem;
-            margin: 0 0.5rem;
-
-            -webkit-mask: url(../assets/icon-down.svg) center / contain
-              no-repeat;
-            -ms-mask: url(../assets/icon-down.svg) center / contain no-repeat;
-            mask: url(../assets/icon-down.svg) center / contain no-repeat;
+            margin: 0 0.5rem;            
             background-color: $grey-5;
             &:hover {
               background-color: $primary;
@@ -246,23 +241,15 @@ header {
       border-bottom: 0.7rem solid $white;
     }
     .logout-menus {
-      .hidden-input {
-        display: none;
-      }
       .show-more-icon {
         margin-left: 1.5rem;
         cursor: pointer;
         img {
           vertical-align: middle;
         }
-      }
-      .hidden-input:checked ~ .menu {
-        display: flex;
-        position: absolute;
-      }
+      }     
       .menu {
         font-size: 0.75rem;
-        display: none;
         flex-direction: column-reverse;
         box-shadow: 0 2px 5px 0 #00000014;
         right: 0;
@@ -282,6 +269,9 @@ header {
         }
       }
     }
+  }
+  .hidden-input:checked + .menu {
+    position: absolute;
   }
 }
 

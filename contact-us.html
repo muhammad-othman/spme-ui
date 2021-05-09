@@ -17,7 +17,7 @@
             <a href="#" onclick="showLoninHeader()"> <img class="logo" src="assets/logo.svg"> </a>
 
             <div class="header-icons flex">
-                <div onClick="showSearchInput();" class="search-icon"></div>
+                <div onClick="showSearchInput()" class="search-icon"></div>
 
                 <div id="search-menu" class="search-menu hidden">
                     <input class="search" type="search"  placeholder="ابحث عن دورة">
@@ -25,7 +25,7 @@
                 </div>
 
                 <div id="login-header" class="login-menus flex">
-                    <a id="loginChangeLanguageButton" class="button activable-item text-button"
+                    <a id="loginChangeLanguageButton" class="button activable-item text-button english-button"
                         onClick="changeLanguage()">English</a>
 
                     <div class="notification-container">
@@ -51,7 +51,7 @@
                         <div onClick="showUserMenu()" class="user-content">
                             <div class="user-img"><img src="assets/man-icon.png"></div>
                             <span class="user-name">محمد عثمان</span>
-                            <div class="user-arrow-icon"></div>
+                            <div class="user-arrow-icon small-arrow"></div>
                         </div>
                         <div id="user-menu-content" class="user-menu-content hidden">
                             <div class="triangle"></div>
@@ -68,11 +68,11 @@
                 </div>
 
                 <nav id="normal-header" class="logout-menus flex">
-                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
                     <label for="show-more-checkbox" class="show-more-icon">
                         <img src="assets/menu-icon.svg">
                     </label>
-                    <ul class="menu">
+                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
+                    <ul class="menu hidden">
                         <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
                                 href="#">تحقق من شهادة</a></li>
                         <li><a id="changeLanguageButton" class="button activable-item text-button"
@@ -138,7 +138,7 @@
             <div class="contact-inputs">
                 <div class="personal-data">
                     <input class="input-name" type="text" placeholder="الاسم">
-                    <input class="input-number" type="number" placeholder="رقم الجوال">
+                    <input class="input-number" type="tel" placeholder="رقم الجوال">
                 </div>
                 <input class="input-email" type="email" placeholder="البريد الألكتروني">
                 <input class="input-messege" type="text" placeholder="الرسالة">
@@ -157,7 +157,7 @@
                         هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
                     </p>
                     <h4>اشترك لتصلك الدورات الجديدة</h4>
-                    <div class="subscribe-search-icon-container">
+                    <div class="subscribe-container">
                         <div class="subscribe-search-icon activable-item">اشترك</div>
                         <input class="subscribe" type="email" placeholder="برجاء ادخال البريد الألكتروني">
                     </div>
@@ -266,12 +266,6 @@
             document.getElementById('login-header').style.display = "none";
             document.getElementById('normal-header').style.display = "flex";
         }
-
-        function showLoginSearchInput() {
-            var loginSearchMenu = document.getElementById('login-search-menu');
-            loginSearchMenu.classList.toggle('hidden');
-        }
-
         function showSearchInput() {
             var searchMenu = document.getElementById('search-menu');
             searchMenu.classList.toggle('hidden');
