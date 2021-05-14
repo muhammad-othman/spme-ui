@@ -180,6 +180,13 @@
   padding-right: 1.5rem;
 }
 
+@include tablet-media-query {
+  .login-content {
+    display: block;
+    max-width: 50rem;
+  }
+}
+
 @include big-tablet-media-query {
   .login-content {
     display: flex;
