@@ -1755,7 +1755,7 @@ header .show-more-icon {
 }
 
 @media (min-width: 62em) {
-  .login-content {
+  .user-login-details {
     display: block;
     max-width: 50rem;
   }
