@@ -1255,6 +1255,137 @@ header .show-more-icon {
     border-radius: 1.25rem 0 0 1.25rem;
   }
 }
+.user-login-details {
+  padding: 1.5rem;
+}
+.user-login-details .login-input {
+  display: flex;
+  flex-direction: column;
+}
+.user-login-details .login-input .form-input {
+  text-align: left;
+  margin: 1rem 0;
+  width: 100%;
+}
+.user-login-details .login-input .form-input .input-label {
+  font-size: 1rem;
+}
+.user-login-details .login-input .form-input .input-container {
+  position: relative;
+}
+.user-login-details .login-input .form-input .input-container input {
+  width: 100%;
+  height: 3rem;
+  padding: 0 1.5rem;
+  margin: 1.125rem 0 0.5rem;
+  padding-right: 3rem;
+}
+.user-login-details .login-input .form-input .input-container .input-icon {
+  position: absolute;
+  right: 0;
+  top: 1.2rem;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  background-color: #000000;
+  -webkit-mask: url(../assets/Icon-eye.svg) no-repeat center;
+  mask: url(../assets/Icon-eye.svg) no-repeat center;
+}
+.user-login-details .login-input .form-input .input-container .input-icon:hover {
+  background: #ff7c00;
+}
+.user-login-details .login-input .input-error .input-area {
+  border: 2px solid #c10f23;
+}
+.user-login-details .login-input .input-error .input-error-message {
+  font-size: 0.7rem;
+  color: #c10f23;
+  margin-right: 1rem;
+}
+.user-login-details .login-input .forget-password {
+  text-align: right;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+  margin: 0;
+}
+.user-login-details .login-input .forget-password a {
+  color: #05111e;
+}
+.user-login-details .login-input .forget-password a:hover {
+  color: #ff7c00;
+  text-decoration: underline;
+}
+.user-login-details .login-input p {
+  margin: 1.6rem 0;
+}
+.user-login-details .login-input .login-button {
+  margin-top: 1.5rem;
+}
+.user-login-details .login-input .login-button a {
+  color: #ffffff;
+}
+.user-login-details .login-input .login-icons {
+  display: flex;
+  justify-content: center;
+}
+.user-login-details .login-input .login-icons .facebook-background {
+  background-color: #3c69b1;
+}
+.user-login-details .login-input .login-icons .facebook-background:hover {
+  background-color: #2e4e82;
+}
+.user-login-details .login-input .login-icons .gmail-background {
+  background-color: #ad3f59;
+}
+.user-login-details .login-input .login-icons .gmail-background:hover {
+  background-color: #772b3d;
+}
+.user-login-details .login-input .login-icons .login-app-icon {
+  cursor: pointer;
+  padding: 0.6rem;
+  margin: 0 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 24px;
+}
+.user-login-details .login-input .login-icons .login-app-icon .login-icon {
+  background-color: #ffffff;
+  height: 1.68rem;
+}
+.user-login-details .login-input .ask-for-account {
+  display: flex;
+  justify-content: center;
+}
+.user-login-details .login-input .ask-for-account p:nth-child(2) {
+  margin: 1.6rem 0.6rem;
+  color: #ff7c00;
+  cursor: pointer;
+}
+.user-login-details .login-input .ask-for-account p:nth-child(2):hover {
+  text-decoration: underline;
+}
+
+.arabic-container .user-login-details .login-input .form-input {
+  text-align: right;
+}
+.arabic-container .user-login-details .login-input .form-input .input-container input {
+  padding-left: 3rem;
+  padding-right: 1.5rem;
+}
+.arabic-container .user-login-details .login-input .form-input .input-container .input-icon {
+  right: unset;
+  left: 0;
+}
+.arabic-container .user-login-details .login-input .forget-password {
+  text-align: left;
+}
+
+@media (min-width: 62em) {
+  .user-login-details {
+    display: block;
+    max-width: 50rem;
+  }
+}
 .warning-messege-content {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
