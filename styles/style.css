@@ -54,6 +54,12 @@ input {
   color: #ffffff;
 }
 
+.gray-button {
+  background-color: #E4E8EF;
+  border: 2px solid #E4E8EF;
+  color: #565656;
+}
+
 .outlined-button:hover,
 .primary-button:hover,
 .cancel-button:hover,
@@ -1918,14 +1924,14 @@ header .show-more-icon {
   justify-content: space-between;
   margin: 3rem;
 }
+.course-video-container .course-video-content .change-video-container .change-video-content {
+  text-align: center;
+}
 .course-video-container .course-video-content .change-video-container .change-video-content .change-video-head {
   display: flex;
   align-items: center;
 }
-.course-video-container .course-video-content .change-video-container .change-video-content .change-video-head .left-button {
-  margin: 0.8rem 0.6rem;
-}
-.course-video-container .course-video-content .change-video-container .change-video-content .change-video-head .right-button {
+.course-video-container .course-video-content .change-video-container .change-video-content .change-video-head h3 {
   margin: 0.8rem 0.6rem;
 }
 .course-video-container .course-video-content .change-video-container .change-video-content .change-video-head .change-video-icon-background {
@@ -1935,12 +1941,12 @@ header .show-more-icon {
   width: 0.68rem;
   height: 0.68rem;
   background: #ffffff;
-  transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-}
-.course-video-container .course-video-content .change-video-container .change-video-content .change-video-head .change-video-icon-background .left-arrow {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
+}
+.course-video-container .course-video-content .change-video-container .change-video-content .change-video-head .change-video-icon-background .left-arrow {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
 }
 .course-video-container .course-video-content .change-video-container .change-video-content .change-video-name {
   color: #565656;
@@ -1999,6 +2005,15 @@ header .show-more-icon {
   box-shadow: 0 2px 10px 2px #00000014;
 }
 
+.arabic-container .course-video-container .course-video-content .change-video-container .change-video-content .change-video-head .change-video-icon-background .change-video-icon {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+}
+.arabic-container .course-video-container .course-video-content .change-video-container .change-video-content .change-video-head .change-video-icon-background .left-arrow {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+
 @media (min-width: 62em) {
   .course-video-container {
     display: flex;
@@ -2011,6 +2026,118 @@ header .show-more-icon {
   .course-video-container .courses-names-content {
     margin-top: 0;
     width: 30%;
+  }
+}
+.test-page-content h2 {
+  margin: 3rem;
+  text-align: center;
+}
+.test-page-content .test-container .test-content {
+  border: 1px solid #E4E8EF;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+.test-page-content .test-container .test-content .test-img {
+  width: 100%;
+}
+.test-page-content .test-container .test-content .test-info-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.8rem 1rem;
+}
+.test-page-content .test-container .test-content .test-info-content .test-button {
+  cursor: pointer;
+  background: #c10f23;
+  color: #ffffff;
+  font-weight: lighter;
+  border-radius: 5px;
+  padding: 0.6rem 1.5rem;
+  margin: 0.9rem;
+}
+.test-page-content .test-container .test-content .test-info-content .test-button:hover {
+  background: #ff0000;
+}
+.test-page-content .test-container .test-content .test-info-content .test-info {
+  background: #FFF6E6;
+  padding: 0.8rem;
+  border: 1px dashed #ff7c00;
+  border-radius: 50%;
+  text-align: center;
+}
+.test-page-content .test-container .test-content .test-info-content .test-info p {
+  margin: 0;
+  line-height: 1.3rem;
+  font-weight: bold;
+}
+.test-page-content .test-container .test-content .test-question {
+  margin: 1rem;
+}
+.test-page-content .test-container .test-content .test-question .question-title {
+  background: #f1f1f1;
+  border-radius: 7px;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+}
+.test-page-content .test-container .test-content .test-question .question-answer-content {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.test-page-content .test-container .test-content .test-question .question-answer-content .question-answer {
+  cursor: pointer;
+  flex: 1;
+  padding: 1.3rem 0.5rem;
+}
+.test-page-content .test-container .test-content .test-question hr {
+  border: 1px solid #E4E8EF;
+}
+.test-page-content .test-container .change-question-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0.5rem 2rem;
+}
+.test-page-content .test-container .change-question-container .change-question-content .change-question-head {
+  display: flex;
+  align-items: center;
+}
+.test-page-content .test-container .change-question-container .change-question-content .change-question-head h4 {
+  margin: 0.8rem 0.6rem;
+}
+.test-page-content .test-container .change-question-container .change-question-content .change-question-head .change-question-icon-background {
+  padding: 0.6rem;
+}
+.test-page-content .test-container .change-question-container .change-question-content .change-question-head .change-question-icon-background .change-question-icon {
+  cursor: pointer;
+  width: 0.68rem;
+  height: 0.68rem;
+  background: #ffffff;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.test-page-content .test-container .change-question-container .change-question-content .change-question-head .change-question-icon-background .gray-arrow {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  background: #565656;
+}
+
+.arabic-container .test-page-content .test-container .change-question-container .change-question-content .change-question-head .change-question-icon-background .change-question-icon {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+}
+.arabic-container .test-page-content .test-container .change-question-container .change-question-content .change-question-head .change-question-icon-background .gray-arrow {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+
+@media (min-width: 40em) {
+  .test-page-content .test-container {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (min-width: 62em) {
+  .test-page-content .test-container {
+    width: 85%;
   }
 }
 

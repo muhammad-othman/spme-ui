@@ -54,6 +54,12 @@ input {
   color: $white;
 }
 
+.gray-button {
+  background-color: $grey-8;
+  border: 2px solid $grey-8;
+  color: $grey-5;
+}
+
 .outlined-button:hover,
 .primary-button:hover,
 .cancel-button:hover,

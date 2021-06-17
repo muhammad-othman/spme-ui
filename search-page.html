@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Account - SPME - Special Progam for Material Education</title>
+    <title>Search Page - SPME - Special Progam for Material Education</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
                 <div onClick="showSearchInput();" class="search-icon"></div>
 
                 <div id="search-menu" class="search-menu hidden">
-                    <input class="search" type="search"  placeholder="ابحث عن دورة">
+                    <input class="search" type="search" placeholder="ابحث عن دورة">
                     <div class="search-input-icon"></div>
                 </div>
 
@@ -95,77 +95,11 @@
     </header>
     <section class="common-title-content">
         <div class="container">
-            <h2>حساب جديد</h2>
-            <p>الرئيسية / إنشاء حساب جديد</p>
+            <h2>الدورات التدريبية</h2>
+            <p>الرئيسية / الدورات التدريبية</p>
         </div>
     </section>
-    <section class="login-content container">
-        <div class="left-part"><img src="assets/login-img.svg"></div>
-        <div class="right-part">
-            <div class="login-title">
-                <h3>إنشاء حساب جديد</h3>
-                <p class="common-paragraph">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تمتوليد هذا النص من
-                    مولد النص العربى</p>
-            </div>
-            <div class="login-input">
 
-                <div class="form-input input-error">
-                    <label class="input-label" for="email-input">اسم المستخدم</label>
-                    <div class="input-container">
-                        <input id="email-input" type="email" placeholder="برجاء ادخال اسم المستخدم">
-                    </div>
-                    <span class="input-error-message"></span>
-                </div>
-                <div class="form-input input-error">
-                    <label class="input-label" for="email-input">الاسم الذى تود كتابته علي الشهادة</label>
-                    <div class="input-container">
-                        <input id="email-input" type="email" placeholder="برجاء ادخال اسم المستخدم">
-                    </div>
-                    <span class="input-error-message"></span>
-                </div>
-                <div class="form-input input-error">
-                    <label class="input-label" for="email-input">البريد الالكتروني</label>
-                    <div class="input-container">
-                        <input id="email-input" type="email" placeholder="برجاء ادخال البريد الألكتروني">
-                    </div>
-                    <span class="input-error-message"></span>
-                </div>
-                <div class="form-input input-error">
-                    <label class="input-label" for="password-input">كلمة المرور</label>
-                    <div class="input-container">
-                        <input id="password-input" type="password" placeholder="برجاء ادخال كلمة المرور">
-                        <div class="input-icon"></div>
-                    </div>
-                    <span class="input-error-message"></span>
-                </div>
-                <div class="form-input input-error">
-                    <label class="input-label" for="password-input">تأكيد كلمة المرور</label>
-                    <div class="input-container">
-                        <input id="password-input" type="password" placeholder="برجاء تأكيد كلمة المرور">
-                        <div class="input-icon"></div>
-                    </div>
-                    <span class="input-error-message"></span>
-                </div>
-                <button class="button activable-item primary-button login-button" href="#">إنشاء حساب</button>
-                <p>أو عن طريق</p>
-                <div class="login-icons">
-                    <div class="login-app-icon facebook-background">
-                        <div class=" login-icon facebook2"></div>
-                    </div>
-                    <div class="login-app-icon gmail-background">
-                        <div class="login-icon gmail"></div>
-                    </div>
-                </div>
-                <div class="ask-for-account">
-                    <p> ليس لديك حساب ؟ </p>
-                    <p>حساب جديد </p>
-                </div>
-
-
-            </div>
-        </div>
-
-    </section>
     <footer>
         <div class="top-footer-part">
             <div class="footer-content container">
@@ -250,7 +184,6 @@
 
     </footer>
 
-
     <script>
         function changeLanguage(event) {
             var body = document.getElementsByTagName("body")[0];
@@ -284,7 +217,6 @@
             document.getElementById('login-header').style.display = "none";
             document.getElementById('normal-header').style.display = "flex";
         }
-
         function showSearchInput() {
             var searchMenu = document.getElementById('search-menu');
             searchMenu.classList.toggle('hidden');
