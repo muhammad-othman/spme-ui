@@ -168,7 +168,14 @@
   .footer-content {
     .subscribe,
     .quick-links {
+      margin-right: 4.9rem;
+    }
+  }
+  .arabic-container .footer-content {
+    .subscribe,
+    .quick-links {
       margin-left: 4.9rem;
+      margin-right: unset;
     }
   }
 }
