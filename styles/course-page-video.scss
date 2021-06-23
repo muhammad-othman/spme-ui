@@ -52,31 +52,13 @@
       opacity: 0.2;
       cursor: pointer;
     }
-    .change-video-container {
-      display: flex;
-      justify-content: space-between;
+    .change-container {
       margin: 3rem;
-      .change-video-content {
+      .change-content {
         text-align: center;
-        .change-video-head {
-          display: flex;
-          align-items: center;
+        .change-head {
           h3 {
             margin: 0.8rem 0.6rem;
-          }
-          .change-video-icon-background {
-            padding: 0.6rem;
-            .change-video-icon {
-              width: 0.68rem;
-              height: 0.68rem;
-              background: $white;
-              transform: rotate(90deg);
-              -webkit-transform: rotate(90deg);
-            }
-            .left-arrow {
-              transform: rotate(270deg);
-              -webkit-transform: rotate(270deg);
-            }
           }
         }
         .change-video-name {
@@ -148,23 +130,6 @@
   }
 }
 
-.arabic-container {
-  .course-video-container
-    .course-video-content
-    .change-video-container
-    .change-video-content
-    .change-video-head
-    .change-video-icon-background {
-    .change-video-icon {
-      transform: rotate(270deg);
-      -webkit-transform: rotate(270deg);
-    }
-    .left-arrow {
-      transform: rotate(90deg);
-      -webkit-transform: rotate(90deg);
-    }
-  }
-}
 
 @include big-tablet-media-query {
   .course-video-container {
