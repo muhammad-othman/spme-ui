@@ -1,0 +1,126 @@
+.search-page-container {
+  .section-filter {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    .section-content {
+      box-shadow: 0 0 10px 0 #00000027;
+      border-radius: 10px;
+      padding: 2rem 1rem;
+      margin: 0.5rem;
+      text-align: center;
+      cursor: pointer;
+      .section-img {
+        margin: auto;
+        border: 1px solid $grey-3;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 3rem;
+        img {
+          width: 100%;
+        }
+      }
+      &:hover {
+        box-shadow: 0 0 5px 0 $secondary;
+      }
+    }
+  }
+  .filter-button-content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 1.5rem 0;
+    .filter-icon-background {
+      padding: 0.5rem;
+      border-radius: 50%;
+      .filter-icon {
+        width: 0.7rem;
+        height: 0.7rem;
+        background: $white;
+        margin: auto;
+      }
+    }
+    .filter-button {
+      text-align: center;
+      margin: 0 0.5rem;
+      color: $primary;
+      font-weight: bolder;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .search-page-content {
+    .filter-content {
+      box-shadow: 0 0 10px 0 #00000027;
+      padding: 1.8rem;
+      background: $white;
+      display: none;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      .filter-items {
+        width: 70%;
+        .filter-title {
+          border-left: 4px solid $primary;
+          padding: 0 0.6rem;
+          margin: 1rem 0 0.7rem;
+        }
+        .filter-item-content {
+          .filter-choice-input {
+            margin: 0.5rem 0;
+          }
+          .filter-choice {
+            margin: 0.6rem;
+          }
+          .range-choice {
+            width: 100%;
+          }
+        }
+        .filter-item-price {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          h5 {
+            border: unset;
+          }
+        }
+      }
+      .filter-view {
+        margin: 1rem auto;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+    }
+    .search-card-content {
+      .search-move-content {
+        margin: 2rem 2rem 3rem;
+        .change-content {
+          margin: auto;
+          .change-item {
+            margin: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.arabic-container {
+  .search-page-container
+    .search-page-content
+    .filter-content
+    .filter-items
+    .filter-title {
+    border-right: 4px solid $primary;
+    border-left: unset;
+  }
+}
+
+
