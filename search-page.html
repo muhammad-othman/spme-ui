@@ -21,7 +21,9 @@
 
                 <div id="search-menu" class="search-menu hidden">
                     <input class="search" type="search" placeholder="ابحث عن دورة">
-                    <a href="search-page.html"><div class="search-input-icon"></div></a>
+                    <a href="search-page.html">
+                        <div class="search-input-icon"></div>
+                    </a>
                 </div>
 
 
@@ -127,12 +129,15 @@
                     <h4>دورات تحصيلية</h4>
                 </div>
             </div>
-            <div class="filter-button-content" onclick="showFilterContent()">
+
+            <label for="filter-hidden-input" class="filter-button-content">
                 <p class=" filter-button">تصنيف</p>
                 <div class="primary-button filter-icon-background">
                     <div class="filter-icon"></div>
                 </div>
-            </div>
+            </label>
+            <input class="filter-hidden-input hidden" id="filter-hidden-input" type="checkbox">
+
             <div class="search-page-content">
                 <div class="filter-content" id="fixed-filter-content">
                     <div class="filter-items">
@@ -191,7 +196,12 @@
                             <h5>50.00 جنيه</h5>
                         </div>
                     </div>
-                    <button class="filter-view primary-button" onclick="hideFilterContent()">اعرض</button>
+                    <button class="apply-filters-button primary-button">
+                        <label for="filter-hidden-input" class="apply-filters-label">
+                            اعرض
+                        </label>
+                    </button>
+
                 </div>
                 <div class="search-card-content">
                     <div class="common-cards">
@@ -583,13 +593,6 @@
             userMenu.classList.toggle('hidden');
         }
 
-        function showFilterContent() {
-            document.getElementById('fixed-filter-content').style.display = "block";
-        }
-
-        function hideFilterContent() {
-            document.getElementById('fixed-filter-content').style.display = "none";
-        }
 
 
     </script>

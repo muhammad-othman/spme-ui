@@ -27,7 +27,6 @@
   }
   .filter-button-content {
     display: flex;
-    width: 5.6rem;
     align-items: center;
     cursor: pointer;
     margin: 1.5rem 0;
@@ -51,7 +50,9 @@
       }
     }
   }
-
+  .filter-hidden-input:checked + .search-page-content .filter-content {
+    display: block;
+  }
   .search-page-content {
     .filter-content {
       box-shadow: 0 0 10px 0 #00000027;
@@ -91,12 +92,18 @@
           }
         }
       }
-      .filter-view {
+      .apply-filters-button {
         margin: 1rem auto;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0;
         font-size: 1rem;
         font-weight: bold;
         border-radius: 5px;
+      }
+
+      .apply-filters-label {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
       }
     }
     .search-card-content {

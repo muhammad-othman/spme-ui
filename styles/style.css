@@ -2181,7 +2181,6 @@ header .show-more-icon {
 }
 .search-page-container .filter-button-content {
   display: flex;
-  width: 5.6rem;
   align-items: center;
   cursor: pointer;
   margin: 1.5rem 0;
@@ -2204,6 +2203,9 @@ header .show-more-icon {
 }
 .search-page-container .filter-button-content .filter-button:hover {
   color: #ff7c00;
+}
+.search-page-container .filter-hidden-input:checked + .search-page-content .filter-content {
+  display: block;
 }
 .search-page-container .search-page-content .filter-content {
   box-shadow: 0 0 10px 0 #00000027;
@@ -2242,12 +2244,17 @@ header .show-more-icon {
 .search-page-container .search-page-content .filter-content .filter-items .filter-item-price h5 {
   border: unset;
 }
-.search-page-container .search-page-content .filter-content .filter-view {
+.search-page-container .search-page-content .filter-content .apply-filters-button {
   margin: 1rem auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
+}
+.search-page-container .search-page-content .filter-content .apply-filters-label {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 .search-page-container .search-page-content .search-card-content .search-move-content {
   margin: 2rem 2rem 3rem;
