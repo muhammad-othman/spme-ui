@@ -1,0 +1,141 @@
+.who-are-we-content {
+  p {
+    color: $grey-5;
+  }
+  padding: 2.5rem 0;
+  .welcome-content {
+    .welcome-messege {
+      .welcome-title {
+        display: flex;
+        align-items: center;
+        h2:nth-child(2) {
+          color: $secondary;
+          margin: 0.5rem;
+        }
+      }
+      .welcome-items {
+        margin-bottom: 3rem;
+        p {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+    .welcome-img-background {
+      background: $grey-1;
+      border-radius: 25px;
+      padding: 4rem 3.5rem 2rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .spme-content {
+    .spme-item {
+      box-shadow: 0 0 10px 0 #00000027;
+      padding: 2rem 1.9rem 1.5rem;
+      margin: 3rem auto;
+      width: 80%;
+      border-radius: 10px;
+      &:hover {
+        box-shadow: 0 0 5px 0 #ff7c00;
+      }
+      h4 {
+        margin: 0.8rem 0;
+      }
+    }
+  }
+  .trainers-content {
+    .trainers-items {
+      .trainers-item {
+        cursor: pointer;
+        position: relative;
+        border-radius: 10px;
+        width: 80%;
+        margin: 2rem auto;
+        &:hover .trainer-photo {
+          opacity: 0.7;
+        }
+        &:hover .trainer-info {
+          box-shadow: 0 0 5px 0 $primary;
+        }
+
+        .trainer-photo {
+          width: 100%;
+          overflow: hidden;
+        }
+        .trainer-info {
+          position: absolute;
+          background: $white;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, -20%);
+          padding: 1.2rem 0.3rem 1rem;
+          text-align: center;
+          border-radius: 12px;
+          width: 85%;
+          p {
+            margin: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet-media-query {
+  .who-are-we-content {
+    .welcome-content .welcome-img-background {
+      width: 35rem;
+      margin: auto;
+    }
+    .trainers-content .trainers-items {
+      display: flex;
+      flex-wrap: wrap;
+      .trainers-item {
+        width: 40%;
+        .trainer-info {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@include big-tablet-media-query {
+  .who-are-we-content {
+    .welcome-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .welcome-img-background {
+        width: 50%;
+        margin: 0;
+      }
+      .welcome-messege {
+        width: 45%;
+      }
+    }
+    .spme-content {
+      display: flex;
+      justify-content: space-between;
+      .spme-item {
+        width: 30%;
+      }
+    }
+    .trainers-content .trainers-items .trainers-item {
+      width: 30%;
+      .trainer-info {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@include desktop-media-query {
+  .who-are-we-content .trainers-content .trainers-items .trainers-item {
+    width: 23%;
+    .trainer-info {
+      width: 85%;
+    }
+  }
+}

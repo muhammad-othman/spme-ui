@@ -2316,5 +2316,129 @@ header .show-more-icon {
     max-width: 50%;
   }
 }
+.who-are-we-content {
+  padding: 2.5rem 0;
+}
+.who-are-we-content p {
+  color: #565656;
+}
+.who-are-we-content .welcome-content .welcome-messege .welcome-title {
+  display: flex;
+  align-items: center;
+}
+.who-are-we-content .welcome-content .welcome-messege .welcome-title h2:nth-child(2) {
+  color: #ff7c00;
+  margin: 0.5rem;
+}
+.who-are-we-content .welcome-content .welcome-messege .welcome-items {
+  margin-bottom: 3rem;
+}
+.who-are-we-content .welcome-content .welcome-messege .welcome-items p {
+  margin-bottom: 1.5rem;
+}
+.who-are-we-content .welcome-content .welcome-img-background {
+  background: #f4f5f7;
+  border-radius: 25px;
+  padding: 4rem 3.5rem 2rem;
+}
+.who-are-we-content .welcome-content .welcome-img-background img {
+  width: 100%;
+}
+.who-are-we-content .spme-content .spme-item {
+  box-shadow: 0 0 10px 0 #00000027;
+  padding: 2rem 1.9rem 1.5rem;
+  margin: 3rem auto;
+  width: 80%;
+  border-radius: 10px;
+}
+.who-are-we-content .spme-content .spme-item:hover {
+  box-shadow: 0 0 5px 0 #ff7c00;
+}
+.who-are-we-content .spme-content .spme-item h4 {
+  margin: 0.8rem 0;
+}
+.who-are-we-content .trainers-content .trainers-items .trainers-item {
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  width: 80%;
+  margin: 2rem auto;
+}
+.who-are-we-content .trainers-content .trainers-items .trainers-item:hover .trainer-photo {
+  opacity: 0.7;
+}
+.who-are-we-content .trainers-content .trainers-items .trainers-item:hover .trainer-info {
+  box-shadow: 0 0 5px 0 #115faf;
+}
+.who-are-we-content .trainers-content .trainers-items .trainers-item .trainer-photo {
+  width: 100%;
+  overflow: hidden;
+}
+.who-are-we-content .trainers-content .trainers-items .trainers-item .trainer-info {
+  position: absolute;
+  background: #ffffff;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  padding: 1.2rem 0.3rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+  width: 85%;
+}
+.who-are-we-content .trainers-content .trainers-items .trainers-item .trainer-info p {
+  margin: 0.1rem;
+}
+
+@media (min-width: 40em) {
+  .who-are-we-content .welcome-content .welcome-img-background {
+    width: 35rem;
+    margin: auto;
+  }
+  .who-are-we-content .trainers-content .trainers-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .who-are-we-content .trainers-content .trainers-items .trainers-item {
+    width: 40%;
+  }
+  .who-are-we-content .trainers-content .trainers-items .trainers-item .trainer-info {
+    width: 90%;
+  }
+}
+@media (min-width: 62em) {
+  .who-are-we-content .welcome-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .who-are-we-content .welcome-content .welcome-img-background {
+    width: 50%;
+    margin: 0;
+  }
+  .who-are-we-content .welcome-content .welcome-messege {
+    width: 45%;
+  }
+  .who-are-we-content .spme-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .who-are-we-content .spme-content .spme-item {
+    width: 30%;
+  }
+  .who-are-we-content .trainers-content .trainers-items .trainers-item {
+    width: 30%;
+  }
+  .who-are-we-content .trainers-content .trainers-items .trainers-item .trainer-info {
+    width: 90%;
+  }
+}
+@media (min-width: 75em) {
+  .who-are-we-content .trainers-content .trainers-items .trainers-item {
+    width: 23%;
+  }
+  .who-are-we-content .trainers-content .trainers-items .trainers-item .trainer-info {
+    width: 85%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
