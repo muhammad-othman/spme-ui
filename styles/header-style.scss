@@ -50,11 +50,9 @@ header {
         right: 0.6rem;
         top: 0.6rem;
         cursor: pointer;
-        width: 2.5rem;
-        height: 2.3rem;
-        -webkit-mask: url(../assets/search.svg) no-repeat center;
-        -ms-mask: url(../assets/search.svg) no-repeat center;
-        mask: url(../assets/search.svg) no-repeat center;
+        width: 1.1rem;
+        height: 1.1rem;
+        margin: 0.6rem;
         background-color: $grey-5;
         &:hover {
           background-color: $primary;

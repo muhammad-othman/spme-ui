@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate - Special Progam for Material Education</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="arabic-container">
+    <header>
+        <div class="container flex header-items">
+            <a href="#" onclick="showLoninHeader()"> <img class="logo" src="assets/logo.svg"> </a>
+
+            <div class="header-icons flex">
+                <div onClick="showSearchInput();" class="search-icon"></div>
+
+                <div id="search-menu" class="search-menu hidden">
+                    <input class="search" type="search" placeholder="ابحث عن دورة">
+                    <a href="search-page.html">
+                        <div class="search-input-icon"></div>
+                    </a>
+                </div>
+
+
+
+                <div id="login-header" class="login-menus flex">
+                    <a id="loginChangeLanguageButton" class="button activable-item text-button english-button"
+                        onClick="changeLanguage()">English</a>
+
+                    <div class="notification-container">
+                        <div onClick="showNotificationsMenu()" class="notifications-icon"></div>
+                        <div id="notifications-menu" class="notifications-menu hidden">
+                            <div class="triangle"></div>
+                            <ul>
+                                <li> <span>الاشعارات</span> <span>مشاهدة الكل</span> </li>
+                                <li> <span>تم تفعيل الدورة</span><span>02:23 PM</span> </li>
+                                <li> <span>الاختبار جاهز</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                                <li> <span>تم تفعيل الدورة</span> <span>02:23 PM</span> </li>
+                            </ul>
+                        </div>
+                        <div class="number-of-notifications">0</div>
+                    </div>
+
+                    <div class="user-container">
+                        <div onClick="showUserMenu()" class="user-content">
+                            <div class="user-img"><img src="assets/man-icon.png"></div>
+                            <span class="user-name">محمد عثمان</span>
+                            <div class="user-arrow-icon small-arrow"></div>
+                        </div>
+                        <div id="user-menu-content" class="user-menu-content hidden">
+                            <div class="triangle"></div>
+                            <ul class="user-menu">
+                                <li>دوراتي</li>
+                                <li>تعديل حسابي</li>
+                                <li> <a href="change-password.html">تغيير كلمة المرور </a></li>
+                                <li id="loginVerifyCertificateButton">تحقق من شهادة</li>
+                                <li><a id="loginChangeLanguageButtonInside" onClick="changeLanguage()">English</a></li>
+                                <li onclick="showNormalHeader()">تسجيل الخروج</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <nav id="normal-header" class="logout-menus flex">
+                    <label for="show-more-checkbox" class="show-more-icon">
+                        <img src="assets/menu-icon.svg">
+                    </label>
+                    <input class="hidden-input hidden" id="show-more-checkbox" type="checkbox">
+                    <ul class="menu hidden">
+                        <li><a id="verifyCertificateButton" class="button activable-item text-button verify-certificate"
+                                href="#">تحقق من شهادة</a></li>
+                        <li><a id="changeLanguageButton" class="button activable-item text-button"
+                                onClick="changeLanguage()">English</a></li>
+                        <li><a id="loginButton" class="button activable-item outlined-button" href="/login.html">تسجيل
+                                الدخول</a></li>
+                        <li><a id="registerButton" class="button activable-item primary-button"
+                                href="/new-account.html">حساب جديد</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+
+        </div>
+
+
+    </header>
+    <section class="common-title-content verify-certificationt-title">
+        <div class="container">
+            <h2>تحقق من شهادة</h2>
+            <div class="search-menu">
+                <input class="search" type="search" placeholder="ابحث بالرقم التعريفي">
+                <div class="search-input-icon"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="verify-certification-content">
+        <div class="container">
+            <div class="certifcation-container">
+                <img src="assets/certefication.png">
+            </div>
+            <div class="trainee-container">
+                <div class="trainee-img">
+                    <img src="assets/man5.jpg">
+                </div>
+                <div class="trainee-content">
+                    <h2>أنجزه</h2>
+                    <h2>محمد عثمان</h2>
+                    <p>25 يناير 2019</p>
+                    <p>4 أسابيع دراسية ، 4-8 ساعات / أسبوع</p>
+                    <p>تم التحقق من حساب محمد عثمان. تشهد SMPE على أكمال الناجح للخوارزميات والتعقيد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="top-footer-part">
+            <div class="footer-content container">
+                <div class="subscribe">
+                    <a href="/index.html"><img src="assets/logo-white.png"></a>
+                    <p class="common-paragraph">
+                        هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحه
+                    </p>
+                    <h4>اشترك لتصلك الدورات الجديدة</h4>
+                    <div class="subscribe-container">
+                        <div class="subscribe-search-icon activable-item">اشترك</div>
+                        <input class="subscribe" type="email" placeholder="برجاء ادخال البريد الألكتروني">
+                    </div>
+                </div>
+                <div class="quick-links">
+                    <div class="quick-links-item">
+                        <h3>روابط سريعة</h3>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الفترات التدريبية</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>الدورات التدريبية</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a href="common-questions.html">الأسئلة الشائعة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a href="/contact-us.html">تواصل معنا</a>
+                        </div>
+                    </div>
+                    <div class="quick-links-item">
+                        <h3>روابط سريعة</h3>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>تحقق من شهادة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>المدونة</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a href="who-are-we.html">من نحن</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="double-arrow icon"></div>
+                            <a>شروط الاستخدام</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <h3>تواصل معنا</h3>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon map icon"></div>
+                            <a>العنوان هنا بالتفصيل</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon phone icon"></div>
+                            <a>123456789</a>
+                        </div>
+                        <div class="quick-link activable-item">
+                            <div class="link-icon email icon"></div>
+                            <a>info@name.com.sa</a>
+                        </div>
+                    </div>
+                    <div class="app-links">
+                        <div class="app-icon activable-item facebook"></div>
+                        <div class="app-icon activable-item whatsapp"></div>
+                        <div class="app-icon activable-item instagram"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer-part">
+            جميع الحقوق محفوظة لموقع SMPE
+        </div>
+
+    </footer>
+
+    <script>
+        function changeLanguage(event) {
+            var body = document.getElementsByTagName("body")[0];
+            body.classList.toggle("arabic-container");
+            if (document.getElementById('changeLanguageButton').innerText == 'العربية') {
+                document.getElementById('verifyCertificateButton').innerText = 'تحقق من شهادة'
+                document.getElementById('loginVerifyCertificateButton').innerText = 'تحقق من شهادة'
+                document.getElementById('loginButton').innerText = 'تسجيل الدخول'
+                document.getElementById('registerButton').innerText = 'حساب جديد'
+                document.getElementById('changeLanguageButton').innerText = 'English'
+                document.getElementById('loginChangeLanguageButton').innerText = 'English'
+                document.getElementById('loginChangeLanguageButtonInside').innerText = 'English'
+            }
+            else {
+                document.getElementById('verifyCertificateButton').innerText = 'Verify Certificate'
+                document.getElementById('loginVerifyCertificateButton').innerText = 'Verify Certificate'
+                document.getElementById('loginButton').innerText = 'Log In'
+                document.getElementById('registerButton').innerText = 'Sign Up'
+                document.getElementById('changeLanguageButton').innerText = 'العربية'
+                document.getElementById('loginChangeLanguageButton').innerText = 'العربية'
+                document.getElementById('loginChangeLanguageButtonInside').innerText = 'العربية'
+            }
+        }
+
+        function showLoninHeader() {
+            document.getElementById('login-header').style.display = "flex";
+            document.getElementById('normal-header').style.display = "none";
+        }
+
+        function showNormalHeader() {
+            document.getElementById('login-header').style.display = "none";
+            document.getElementById('normal-header').style.display = "flex";
+        }
+        function showSearchInput() {
+            var searchMenu = document.getElementById('search-menu');
+            searchMenu.classList.toggle('hidden');
+        }
+
+        function showSearchTriangle() {
+            var searchTriangle = document.getElementById('search-triangle');
+            searchTriangle.classList.toggle('hidden');
+        }
+
+        function showNotificationsMenu() {
+            var notificationsMenu = document.getElementById('notifications-menu');
+            notificationsMenu.classList.toggle('hidden');
+        }
+
+        function showUserMenu() {
+            var userMenu = document.getElementById('user-menu-content');
+            userMenu.classList.toggle('hidden');
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
