@@ -1,0 +1,75 @@
+.main-trainer-container {
+  background-image: url(../assets/blue-background2.svg);
+  background-size: cover;
+  padding: 4.3rem 0;
+  color: $white;
+  h2 {
+    font-size: 1.5rem;
+  }
+  .trainer-img {
+    width: 70%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 2rem auto;
+    img {
+      width: 100%;
+    }
+  }
+  .trainer-content {
+    h3 {
+      font-weight: unset;
+      margin-bottom: 0.8rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-top: 0.8rem;
+    }
+    .trainer-info {
+      background: $white;
+      border-radius: 10px;
+      padding: 1.875rem;
+      color: $black;
+      margin: 2.8rem 0 5rem;
+      p {
+        opacity: 70%;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.tranier-courses-container {
+    h2{
+        margin: 2rem 0;
+    }
+  .search-move-content {
+    margin: 2rem 2rem 3rem;
+    .change-content {
+      margin: auto;
+      .change-item {
+        margin: 0.2rem;
+      }
+    }
+  }
+}
+
+@include tablet-media-query {
+  .main-trainer-container .trainer-img {
+    width: 55%;
+  }
+}
+
+@include big-tablet-media-query {
+  .main-trainer-container .trainer-container {
+    display: flex;
+    align-items: flex-start;
+    width: 63%;
+  }
+  .main-trainer-container .trainer-img {
+    margin: 0 2rem 0 0;
+  }
+
+  .arabic-container .main-trainer-container .trainer-img {
+    margin: 0 0 0 2rem;
+  }
+}
