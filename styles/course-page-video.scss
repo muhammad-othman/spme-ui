@@ -66,6 +66,41 @@
         }
       }
     }
+    .home-work-container {
+      margin: 2rem 0;
+      padding: 0.5rem 1rem;
+      border: 2px solid $grey-2;
+      border-radius: 10px;
+      .home-work-content {
+        .home-work-description {
+          p {
+          }
+        }
+        .home-work-upload {
+          display: flex;
+          align-items: center;
+          p {
+            font-weight: 800;
+          }
+          .upload-icon{
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            background: $info; 
+            transition: background-color .2s linear;
+            margin: 0 0.7rem;
+          }
+          .upload-icon:hover {
+            background: $secondary;         
+
+          }
+        }
+      }
+      .home-work-line {
+        border: 1px solid $grey-2;
+        margin: 2rem 0;
+      }
+    }
   }
   .courses-names-content {
     .course-details {
@@ -129,7 +164,6 @@
     }
   }
 }
-
 
 @include big-tablet-media-query {
   .course-video-container {

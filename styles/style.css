@@ -1153,6 +1153,11 @@ header .show-more-icon {
   mask: url(../assets/search.svg) center/contain no-repeat;
 }
 
+.upload-icon {
+  -webkit-mask: url(../assets/upload.svg) center/contain no-repeat;
+  mask: url(../assets/upload.svg) center/contain no-repeat;
+}
+
 .common-title-content {
   background-image: url(../assets/gray-background.png);
   background-size: cover;
@@ -2006,6 +2011,34 @@ header .show-more-icon {
 }
 .course-video-container .course-video-content .change-container .change-content .change-video-name {
   color: #565656;
+}
+.course-video-container .course-video-content .home-work-container {
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid #f1f1f1;
+  border-radius: 10px;
+}
+.course-video-container .course-video-content .home-work-container .home-work-content .home-work-upload {
+  display: flex;
+  align-items: center;
+}
+.course-video-container .course-video-content .home-work-container .home-work-content .home-work-upload p {
+  font-weight: 800;
+}
+.course-video-container .course-video-content .home-work-container .home-work-content .home-work-upload .upload-icon {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background: #397bde;
+  transition: background-color 0.2s linear;
+  margin: 0 0.7rem;
+}
+.course-video-container .course-video-content .home-work-container .home-work-content .home-work-upload .upload-icon:hover {
+  background: #ff7c00;
+}
+.course-video-container .course-video-content .home-work-container .home-work-line {
+  border: 1px solid #f1f1f1;
+  margin: 2rem 0;
 }
 .course-video-container .courses-names-content .course-details {
   border: 1px solid #d1d1d1;
